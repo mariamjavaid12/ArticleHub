@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ArticleHub.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d2b96e69d06d74ee7926c6a4e2bbd3f876d9e05c")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+49d2e65e5d5548611cd3b4d6c83e61ffcf7d57d5")]
 [assembly: System.Reflection.AssemblyProductAttribute("ArticleHub.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ArticleHub.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

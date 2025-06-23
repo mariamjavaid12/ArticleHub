@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "eTy7Rt6RKngRwLKCZWN5PFWrKN+ZehYlQkSHqgl1QWU=",
+  "Hash": "XZn3EthYy+aPHWiVbBkV1tDbGnFI9G0xi1mAUgFzlOw=",
   "Source": "ArticleHub.Server",
   "BasePath": "_content/ArticleHub.Server",
   "Mode": "Default",
@@ -11,11 +11,11 @@
       "Version": 2,
       "Source": "articlehub.client",
       "GetPublishAssetsTargets": "GetCurrentProjectPublishStaticWebAssetItems",
-      "AdditionalPublishProperties": "",
-      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained",
+      "AdditionalPublishProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalPublishPropertiesToRemove": "WebPublishProfileFile;TargetFramework",
       "GetBuildAssetsTargets": "GetCurrentProjectBuildStaticWebAssetItems",
-      "AdditionalBuildProperties": "",
-      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework;RuntimeIdentifier;SelfContained"
+      "AdditionalBuildProperties": "Configuration=Debug;Platform=AnyCPU",
+      "AdditionalBuildPropertiesToRemove": "WebPublishProfileFile;TargetFramework"
     }
   ],
   "DiscoveryPatterns": [],

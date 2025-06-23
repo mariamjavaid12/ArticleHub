@@ -170,3 +170,8 @@ C:\Users\Umar Javed\source\repos\ArticleHub\ArticleHub.Server\obj\Debug\net8.0\r
 C:\Users\Umar Javed\source\repos\ArticleHub\ArticleHub.Server\obj\Debug\net8.0\ArticleHub.Server.pdb
 C:\Users\Umar Javed\source\repos\ArticleHub\ArticleHub.Server\obj\Debug\net8.0\ArticleHub.Server.genruntimeconfig.cache
 C:\Users\Umar Javed\source\repos\ArticleHub\ArticleHub.Server\obj\Debug\net8.0\ref\ArticleHub.Server.dll
+C:\Users\Umar Javed\source\repos\ArticleHub\ArticleHub.Server\bin\Debug\net8.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\Umar Javed\source\repos\ArticleHub\ArticleHub.Server\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\Umar Javed\source\repos\ArticleHub\ArticleHub.Server\bin\Debug\net8.0\spa.proxy.json
+C:\Users\Umar Javed\source\repos\ArticleHub\ArticleHub.Server\obj\Debug\net8.0\spa.proxy.json
+C:\Users\Umar Javed\source\repos\ArticleHub\ArticleHub.Server\bin\Debug\net8.0\Microsoft.AspNetCore.SpaProxy.dll
