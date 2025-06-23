@@ -3,6 +3,9 @@ import { Routes, Route } from 'react-router-dom';
 import Login from './auth/Login';
 import Register from './auth/Register';
 import PrivateRoute from './auth/PrivateRoute';
+import AuthorDashboard from './Pages/AuthorDashboard';
+import EditorDashboard from './Pages/EditorDashboard';
+import DashboardLayout from './layout/DashboardLayout';
 const App = () => {
     return (
         <Routes>
@@ -15,7 +18,9 @@ const App = () => {
                 path="/author"
                 element={
                     <PrivateRoute roles={['Author']}>
-                        <div>Author Dashboard</div>
+                        <DashboardLayout>
+                            <AuthorDashboard />
+                        </DashboardLayout>
                     </PrivateRoute>
                 }
             />
@@ -23,7 +28,9 @@ const App = () => {
                 path="/editor"
                 element={
                     <PrivateRoute roles={['Editor']}>
-                        <div>Editor DashBoard</div>
+                        <DashboardLayout>
+                            <EditorDashboard />
+                        </DashboardLayout>
                     </PrivateRoute>
                 }
             />

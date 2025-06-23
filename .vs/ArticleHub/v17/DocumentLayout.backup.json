@@ -3,20 +3,28 @@
   "WorkspaceRootPath": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{8C13AE6B-F4E6-49C7-931D-DACF501A25C9}|ArticleHub.Server\\ArticleHub.Server.csproj|c:\\users\\umar javed\\source\\repos\\articlehub\\articlehub.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8C13AE6B-F4E6-49C7-931D-DACF501A25C9}|ArticleHub.Server\\ArticleHub.Server.csproj|solutionrelative:articlehub.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{452ACCFA-84A5-4C0C-8800-65974EF7846D}|articlehub.client\\articlehub.client.esproj|c:\\users\\umar javed\\source\\repos\\articlehub\\articlehub.client\\src\\components\\navbar.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{452ACCFA-84A5-4C0C-8800-65974EF7846D}|articlehub.client\\articlehub.client.esproj|solutionrelative:articlehub.client\\src\\components\\navbar.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8C13AE6B-F4E6-49C7-931D-DACF501A25C9}|ArticleHub.Server\\ArticleHub.Server.csproj|c:\\users\\umar javed\\source\\repos\\articlehub\\articlehub.server\\articlehub.server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
-      "RelativeMoniker": "D:0:0:{8C13AE6B-F4E6-49C7-931D-DACF501A25C9}|ArticleHub.Server\\ArticleHub.Server.csproj|solutionrelative:articlehub.server\\articlehub.server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+      "AbsoluteMoniker": "D:0:0:{452ACCFA-84A5-4C0C-8800-65974EF7846D}|articlehub.client\\articlehub.client.esproj|c:\\users\\umar javed\\source\\repos\\articlehub\\articlehub.client\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{452ACCFA-84A5-4C0C-8800-65974EF7846D}|articlehub.client\\articlehub.client.esproj|solutionrelative:articlehub.client\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C13AE6B-F4E6-49C7-931D-DACF501A25C9}|ArticleHub.Server\\ArticleHub.Server.csproj|c:\\users\\umar javed\\source\\repos\\articlehub\\articlehub.server\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C13AE6B-F4E6-49C7-931D-DACF501A25C9}|ArticleHub.Server\\ArticleHub.Server.csproj|solutionrelative:articlehub.server\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8C13AE6B-F4E6-49C7-931D-DACF501A25C9}|ArticleHub.Server\\ArticleHub.Server.csproj|c:\\users\\umar javed\\source\\repos\\articlehub\\articlehub.server\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8C13AE6B-F4E6-49C7-931D-DACF501A25C9}|ArticleHub.Server\\ArticleHub.Server.csproj|solutionrelative:articlehub.server\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{8C13AE6B-F4E6-49C7-931D-DACF501A25C9}|ArticleHub.Server\\ArticleHub.Server.csproj|c:\\users\\umar javed\\source\\repos\\articlehub\\articlehub.server\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8C13AE6B-F4E6-49C7-931D-DACF501A25C9}|ArticleHub.Server\\ArticleHub.Server.csproj|solutionrelative:articlehub.server\\services\\authservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{8C13AE6B-F4E6-49C7-931D-DACF501A25C9}|ArticleHub.Server\\ArticleHub.Server.csproj|c:\\users\\umar javed\\source\\repos\\articlehub\\articlehub.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C13AE6B-F4E6-49C7-931D-DACF501A25C9}|ArticleHub.Server\\ArticleHub.Server.csproj|solutionrelative:articlehub.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C13AE6B-F4E6-49C7-931D-DACF501A25C9}|ArticleHub.Server\\ArticleHub.Server.csproj|c:\\users\\umar javed\\source\\repos\\articlehub\\articlehub.server\\articlehub.server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{8C13AE6B-F4E6-49C7-931D-DACF501A25C9}|ArticleHub.Server\\ArticleHub.Server.csproj|solutionrelative:articlehub.server\\articlehub.server.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
     },
     {
       "AbsoluteMoniker": "D:0:0:{452ACCFA-84A5-4C0C-8800-65974EF7846D}|articlehub.client\\articlehub.client.esproj|c:\\users\\umar javed\\source\\repos\\articlehub\\articlehub.client\\src\\auth\\register.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -39,10 +47,6 @@
       "RelativeMoniker": "D:0:0:{452ACCFA-84A5-4C0C-8800-65974EF7846D}|articlehub.client\\articlehub.client.esproj|solutionrelative:articlehub.client\\src\\main.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{452ACCFA-84A5-4C0C-8800-65974EF7846D}|articlehub.client\\articlehub.client.esproj|c:\\users\\umar javed\\source\\repos\\articlehub\\articlehub.client\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{452ACCFA-84A5-4C0C-8800-65974EF7846D}|articlehub.client\\articlehub.client.esproj|solutionrelative:articlehub.client\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{452ACCFA-84A5-4C0C-8800-65974EF7846D}|articlehub.client\\articlehub.client.esproj|c:\\users\\umar javed\\source\\repos\\articlehub\\articlehub.client\\src\\auth\\login.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{452ACCFA-84A5-4C0C-8800-65974EF7846D}|articlehub.client\\articlehub.client.esproj|solutionrelative:articlehub.client\\src\\auth\\login.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
@@ -62,24 +66,24 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 2,
+          "SelectedChildIndex": 0,
           "Children": [
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ArticleHub.Server",
-              "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\ArticleHub.Server\\ArticleHub.Server.csproj",
-              "RelativeDocumentMoniker": "ArticleHub.Server\\ArticleHub.Server.csproj",
-              "ToolTip": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\ArticleHub.Server\\ArticleHub.Server.csproj",
-              "RelativeToolTip": "ArticleHub.Server\\ArticleHub.Server.csproj",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
-              "WhenOpened": "2025-06-23T12:28:29.475Z",
+              "DocumentIndex": 0,
+              "Title": "Navbar.jsx",
+              "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\Components\\Navbar.jsx",
+              "RelativeDocumentMoniker": "articlehub.client\\src\\Components\\Navbar.jsx",
+              "ToolTip": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\Components\\Navbar.jsx",
+              "RelativeToolTip": "articlehub.client\\src\\Components\\Navbar.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-06-23T12:35:51.041Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 7,
               "Title": "vite.config.js",
               "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\vite.config.js",
               "RelativeDocumentMoniker": "articlehub.client\\vite.config.js",
@@ -87,25 +91,23 @@
               "RelativeToolTip": "articlehub.client\\vite.config.js",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAACkAAAAYAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-06-23T12:26:10.141Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-23T12:26:10.141Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 4,
               "Title": "Program.cs",
               "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\ArticleHub.Server\\Program.cs",
               "RelativeDocumentMoniker": "ArticleHub.Server\\Program.cs",
-              "ToolTip": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\ArticleHub.Server\\Program.cs*",
-              "RelativeToolTip": "ArticleHub.Server\\Program.cs*",
+              "ToolTip": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\ArticleHub.Server\\Program.cs",
+              "RelativeToolTip": "ArticleHub.Server\\Program.cs",
               "ViewState": "AgIAAC0AAAAAAAAAAAAAADoAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T12:23:47.804Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-23T12:23:47.804Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 8,
               "Title": "launchSettings.json",
               "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\ArticleHub.Server\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "ArticleHub.Server\\Properties\\launchSettings.json",
@@ -113,38 +115,61 @@
               "RelativeToolTip": "ArticleHub.Server\\Properties\\launchSettings.json",
               "ViewState": "AgIAAA0AAAAAAAAAAAAIwBsAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-23T12:21:55.94Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-23T12:21:55.94Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 2,
               "Title": "AuthService.cs",
               "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\ArticleHub.Server\\Services\\AuthService.cs",
               "RelativeDocumentMoniker": "ArticleHub.Server\\Services\\AuthService.cs",
               "ToolTip": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\ArticleHub.Server\\Services\\AuthService.cs",
               "RelativeToolTip": "ArticleHub.Server\\Services\\AuthService.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAADgvxkAAAASAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAqAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-06-23T12:20:06.431Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "AuthController.cs",
               "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\ArticleHub.Server\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "ArticleHub.Server\\Controllers\\AuthController.cs",
               "ToolTip": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\ArticleHub.Server\\Controllers\\AuthController.cs",
               "RelativeToolTip": "ArticleHub.Server\\Controllers\\AuthController.cs",
-              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAA5AAAAAAAAAA==",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAABUAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-23T12:19:58.268Z",
+              "WhenOpened": "2025-06-23T12:19:58.268Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "App.jsx",
+              "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\App.jsx",
+              "RelativeDocumentMoniker": "articlehub.client\\src\\App.jsx",
+              "ToolTip": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\App.jsx",
+              "RelativeToolTip": "articlehub.client\\src\\App.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACUAAABBAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-06-23T12:03:50.73Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
+              "Title": "ArticleHub.Server.csproj",
+              "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\ArticleHub.Server\\ArticleHub.Server.csproj",
+              "RelativeDocumentMoniker": "ArticleHub.Server\\ArticleHub.Server.csproj",
+              "ToolTip": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\ArticleHub.Server\\ArticleHub.Server.csproj",
+              "RelativeToolTip": "ArticleHub.Server\\ArticleHub.Server.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAApAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-23T12:28:29.475Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "Register.jsx",
               "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\auth\\Register.jsx",
               "RelativeDocumentMoniker": "articlehub.client\\src\\auth\\Register.jsx",
@@ -152,12 +177,11 @@
               "RelativeToolTip": "articlehub.client\\src\\auth\\Register.jsx",
               "ViewState": "AgIAAAYAAAAAAAAAAAAAAA0AAAAaAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-06-23T12:18:57.181Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-23T12:18:57.181Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
               "Title": "axios.js",
               "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\api\\axios.js",
               "RelativeDocumentMoniker": "articlehub.client\\src\\api\\axios.js",
@@ -165,12 +189,11 @@
               "RelativeToolTip": "articlehub.client\\src\\api\\axios.js",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAjAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001646|",
-              "WhenOpened": "2025-06-23T12:08:46.733Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-23T12:08:46.733Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "Login.jsx",
               "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\auth\\Login.jsx",
               "RelativeDocumentMoniker": "articlehub.client\\src\\auth\\Login.jsx",
@@ -178,12 +201,11 @@
               "RelativeToolTip": "articlehub.client\\src\\auth\\Login.jsx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-06-23T12:07:30.304Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-23T12:07:30.304Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "package.json",
               "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\package.json",
               "RelativeDocumentMoniker": "articlehub.client\\package.json",
@@ -191,12 +213,11 @@
               "RelativeToolTip": "articlehub.client\\package.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-06-23T12:04:35.998Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-23T12:04:35.998Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 10,
               "Title": "main.jsx",
               "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\main.jsx",
               "RelativeDocumentMoniker": "articlehub.client\\src\\main.jsx",
@@ -204,12 +225,11 @@
               "RelativeToolTip": "articlehub.client\\src\\main.jsx",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAACAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-06-23T12:04:32.094Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-23T12:04:32.094Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "index.css",
               "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\index.css",
               "RelativeDocumentMoniker": "articlehub.client\\src\\index.css",
@@ -217,21 +237,7 @@
               "RelativeToolTip": "articlehub.client\\src\\index.css",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2025-06-23T12:04:30.993Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "App.jsx",
-              "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\App.jsx",
-              "RelativeDocumentMoniker": "articlehub.client\\src\\App.jsx",
-              "ToolTip": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\App.jsx",
-              "RelativeToolTip": "articlehub.client\\src\\App.jsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAKAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-06-23T12:03:50.73Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-06-23T12:04:30.993Z"
             }
           ]
         }
