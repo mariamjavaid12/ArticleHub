@@ -1,0 +1,9 @@
+C:\Users\Umar Javed\source\repos\ArticleHub\ArticleHub.Server\obj\Debug\net8.0\ArticleHub.Server.csproj.AssemblyReference.cache
+C:\Users\Umar Javed\source\repos\ArticleHub\ArticleHub.Server\obj\Debug\net8.0\spa.proxy.json
+C:\Users\Umar Javed\source\repos\ArticleHub\ArticleHub.Server\obj\Debug\net8.0\ArticleHub.Server.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Umar Javed\source\repos\ArticleHub\ArticleHub.Server\obj\Debug\net8.0\ArticleHub.Server.AssemblyInfoInputs.cache
+C:\Users\Umar Javed\source\repos\ArticleHub\ArticleHub.Server\obj\Debug\net8.0\ArticleHub.Server.AssemblyInfo.cs
+C:\Users\Umar Javed\source\repos\ArticleHub\ArticleHub.Server\obj\Debug\net8.0\ArticleHub.Server.csproj.CoreCompileInputs.cache
+C:\Users\Umar Javed\source\repos\ArticleHub\ArticleHub.Server\obj\Debug\net8.0\ArticleHub.Server.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\Umar Javed\source\repos\ArticleHub\ArticleHub.Server\obj\Debug\net8.0\ArticleHub.Server.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\Umar Javed\source\repos\ArticleHub\ArticleHub.Server\obj\Debug\net8.0\ArticleHub.Server.sourcelink.json
