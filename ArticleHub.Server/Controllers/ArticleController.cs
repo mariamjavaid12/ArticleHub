@@ -1,6 +1,7 @@
 ﻿using ArticleManagementSystem.Server.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
+using System;
 using System.Security.Claims;
 using static ArticleManagementSystem.Server.DTOs.DTOs;
 
@@ -40,11 +41,32 @@ namespace ArticleManagmentAPI.Controllers
         [HttpPost]
         public async Task<IActionResult> Create(CreateArticleDto dto)
         {
-            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
-            var article = await _articleService.CreateArticleAsync(userId, dto);
-            return CreatedAtAction(nameof(Get), new { id = article.Id }, article);
-        }
+            try
+            {
+                var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+                var article = await _articleService.CreateArticleAsync(userId, dto);
+              
+                var latestVersion = article.Versions.LastOrDefault();
 
+                var articleDto = new ArticlesDto
+                {
+                    Id = article.Id,
+                    Title = latestVersion.Title,
+                    Abstract = latestVersion.Abstract,
+                    Body = latestVersion.Body,
+                    Language = latestVersion.Language,
+                    Status = ""
+                };
+
+                return CreatedAtAction(nameof(Get), new { id = article.Id }, articleDto);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex);
+                return BadRequest(ex.Message);
+            }
+        }
+        
         [Authorize(Roles = "Author")]
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, CreateArticleDto dto)
@@ -54,11 +76,29 @@ namespace ArticleManagmentAPI.Controllers
         }
 
         [Authorize(Roles = "Author")]
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> Delete(int id)
+        [HttpDelete("{articleId}")]
+        public async Task<IActionResult> DeleteDraft(int articleId)
         {
-            var result = await _articleService.DeleteArticleAsync(id);
-            return result ? NoContent() : NotFound();
+            var result = await _articleService.DeleteDraftArticleAsync(articleId);
+            return result ? Ok("Draft deleted") : BadRequest("Cannot delete non-draft article");
+        }
+        [Authorize(Roles = "Author")]
+        [HttpDelete("{articleId}/version/{language}/{versionNumber}")]
+        public async Task<IActionResult> DeleteVersion(int articleId, string language, int versionNumber)
+        {
+            var deleted = await _articleService.DeleteVersionAsync(articleId, language, versionNumber);
+
+            if (!deleted)
+                return BadRequest("Only draft versions can be deleted, or version not found.");
+
+            return Ok("Draft version deleted.");
+        }
+        [Authorize(Roles = "Author")]
+        [HttpPost("versions/{versionId}/submit")]
+        public async Task<IActionResult> SubmitVersion(int versionId)
+        {
+            var success = await _articleService.SubmitVersionAsync(versionId);
+            return success ? Ok(new { message = "Submitted successfully" }) : NotFound();
         }
 
         [Authorize(Roles = "Author")]
@@ -66,7 +106,27 @@ namespace ArticleManagmentAPI.Controllers
         public async Task<IActionResult> AddVersion(int id, CreateArticleDto dto)
         {
             var result = await _articleService.AddVersionAsync(id, dto);
-            return result == null ? NotFound() : Ok(result);
+
+            if (result != null)
+            {
+                return Ok(new ArticleVersionDto
+                {
+                    VersionId = result.Id,
+                    Language = result.Language,
+                    VersionNumber = result.VersionNumber,
+                    Title = result.Title,
+                    Abstract = result.Abstract,
+                    Body = result.Body,
+                    Status = result.Submission?.Status,
+                    CreatedAt = result.CreatedAt
+                });
+            }
+            else
+            {
+                return BadRequest("No changes detected. Article was not updated.");
+
+            }
+            
         }
 
         [HttpGet("{id}/versions")]

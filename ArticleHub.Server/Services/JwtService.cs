@@ -26,12 +26,12 @@ namespace ArticleManagementSystem.Server.Services
             var key = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(_config["Jwt:Key"]));
             var creds = new SigningCredentials(key, SecurityAlgorithms.HmacSha256);
             var token = new JwtSecurityToken(
-               issuer: _config["Jwt:Issuer"],
-               audience: _config["Jwt:Issuer"],
-               claims: claims,
-               expires: DateTime.UtcNow.AddHours(2),
-               signingCredentials: creds
-             );
+                issuer: _config["Jwt:Issuer"],
+                audience: _config["Jwt:Issuer"],
+                claims: claims,
+                expires: DateTime.UtcNow.AddHours(2),
+                signingCredentials: creds
+            );
             try
             {
                 var jwt = new JwtSecurityTokenHandler().WriteToken(token);

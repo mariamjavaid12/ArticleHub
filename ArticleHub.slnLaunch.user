@@ -1,0 +1,15 @@
+[
+  {
+    "Name": "New Profile",
+    "Projects": [
+      {
+        "Path": "ArticleHub.Server\\ArticleHub.Server.csproj",
+        "Action": "Start"
+      },
+      {
+        "Path": "articlehub.client\\articlehub.client.esproj",
+        "Action": "Start"
+      }
+    ]
+  }
+]

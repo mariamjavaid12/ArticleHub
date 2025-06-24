@@ -3,11 +3,20 @@ import { Routes, Route } from 'react-router-dom';
 import Login from './auth/Login';
 import Register from './auth/Register';
 import PrivateRoute from './auth/PrivateRoute';
-import AuthorDashboard from './Pages/AuthorDashboard';
-import EditorDashboard from './Pages/EditorDashboard';
+import AuthorDashboard from './Pages/Author/AuthorDashboard';
+import EditorDashboard from './Pages/Editor/EditorDashboard';
 import DashboardLayout from './layout/DashboardLayout';
+import { SnackbarProvider } from './Pages/SnackbarContext ';
+
+import CreateArticle from './Pages/Author/CreateArticle';
+import MyArticles from './Pages/Author/MyArticles';
+import ViewVersions from './Pages/Author/ViewVersions';
+import ViewArticle from './Pages/Author/ViewArticle';
+import EditArticle from './Pages/Author/EditArticle';
+
 const App = () => {
     return (
+        <SnackbarProvider>
         <Routes>
             <Route path="/" element={<Login />} />
             <Route path="/login" element={<Login />} />
@@ -34,9 +43,60 @@ const App = () => {
                     </PrivateRoute>
                 }
             />
-
+            <Route
+            path="/author/new-article"
+            element={
+                <PrivateRoute roles={['Author']}>
+                    <DashboardLayout>
+                        <CreateArticle />
+                    </DashboardLayout>
+                </PrivateRoute>
+            }
+                />
+            <Route
+                path="/author/articles"
+                element={
+                    <PrivateRoute roles={['Author']}>
+                        <DashboardLayout>
+                            <MyArticles />
+                        </DashboardLayout>
+                    </PrivateRoute>
+                }
+                />
+                <Route
+                    path="/author/articles/:articleId/versions"
+                    element={
+                        <PrivateRoute roles={['Author']}>
+                            <DashboardLayout>
+                                <ViewVersions />
+                            </DashboardLayout>
+                        </PrivateRoute>
+                    }
+                />
+               
+                <Route
+                    path="/author/articles/:articleId/version/:language/:versionNumber"
+                    element={
+                        <PrivateRoute roles={['Author']}>
+                            <DashboardLayout>
+                                <ViewArticle />
+                            </DashboardLayout>
+                        </PrivateRoute>
+                    }
+                />
+                <Route
+                    path="/author/articles/:id/edit"
+                    element={
+                        <PrivateRoute roles={['Author']}>
+                            <DashboardLayout>
+                                <EditArticle />
+                            </DashboardLayout>
+                        </PrivateRoute>
+                    }
+                />
             <Route path="*" element={<div>404 Not Found</div>} />
-        </Routes>
+            </Routes>
+        </SnackbarProvider>
     );
 };
 

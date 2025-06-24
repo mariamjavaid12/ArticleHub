@@ -3,6 +3,7 @@ import {
     Drawer, List, ListItemButton, ListItemIcon, ListItemText,
     IconButton, Divider, Toolbar, Typography, Box
 } from '@mui/material';
+import HomeIcon from '@mui/icons-material/Home';
 import {
     Menu as MenuIcon,
     Dashboard as DashboardIcon,
@@ -29,10 +30,9 @@ const Sidebar = ({ open, toggleSidebar }) => {
     };
 
     const authorItems = [
-        { label: 'My Articles', icon: <DashboardIcon />, path: '/author' },
-        { label: 'Submit New Article', icon: <NoteAddIcon />, path: '/author/new-article' },
-        { label: 'Version History', icon: <HistoryIcon />, path: '/author/versions' },
-        { label: 'Multilingual Support', icon: <GTranslateIcon />, path: '/author/languages' }
+        { label: 'Home', icon: <HomeIcon />, path: '/author' },
+        { label: 'My Articles', icon: <DashboardIcon />, path: '/author/articles' },
+        { label: 'New Article', icon: <NoteAddIcon />, path: '/author/new-article' }
     ];
 
     const editorItems = [

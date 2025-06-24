@@ -10,16 +10,29 @@ import { useNavigate } from 'react-router-dom';
 const Login = () => {
     const [form, setForm] = useState({ username: '', password: '' });
     const [rememberMe, setRememberMe] = useState(true);
+    const [loginError, setLoginError] = useState('');
     const { login } = useAuth();
     const navigate = useNavigate();
-
     const handleSubmit = async (e) => {
         e.preventDefault();
-        try {
-            const res = await axios.post('/auth/login', form);
-            const token = res.data.token;
+        setLoginError('');
 
-            // Store token based on Remember Me
+        try {
+            const res = await axios.post('/auth/login', form, {
+                validateStatus: () => true  // <== This prevents Axios from throwing on 401
+            });
+
+            if (res.status === 401) {
+                setLoginError(res.data || 'Invalid username or password');
+                return;
+            }
+
+            const token = res?.data?.token;
+            if (!token) {
+                setLoginError('Invalid response from server');
+                return;
+            }
+
             if (rememberMe) {
                 localStorage.setItem('token', token);
             } else {
@@ -27,11 +40,12 @@ const Login = () => {
             }
 
             login(token, res.data.username, res.data.role);
-        } catch {
-            alert('Invalid login');
+        } catch (err) {
+            console.error("Unexpected login error:", err);
+            setLoginError('Something went wrong. Please try again.');
         }
     };
-
+        
     return (
         <Container maxWidth="xs">
             <Box sx={{ mt: 8, p: 4, border: '1px solid #ccc', borderRadius: 2 }}>
@@ -57,6 +71,12 @@ const Login = () => {
                         control={<Checkbox checked={rememberMe} onChange={e => setRememberMe(e.target.checked)} />}
                         label="Remember me"
                     />
+
+                    {loginError && (
+                        <Typography color="error" variant="body2" mt={1}>
+                            {loginError}
+                        </Typography>
+                    )}
 
                     <Button fullWidth variant="contained" color="primary" type="submit" sx={{ mt: 2 }}>
                         Login

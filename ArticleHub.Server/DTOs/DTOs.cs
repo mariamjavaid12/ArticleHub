@@ -1,4 +1,6 @@
-﻿namespace ArticleManagementSystem.Server.DTOs
+﻿using ArticleHub.Server.Models;
+
+namespace ArticleManagementSystem.Server.DTOs
 {
     public class DTOs
     {
@@ -29,7 +31,15 @@
             public string AuthorUsername { get; set; }
             public List<ArticleVersionDto> Versions { get; set; }
         }
-
+        public class ArticlesDto
+        {
+            public int Id { get; set; }
+            public string Title { get; set; }
+            public string Abstract { get; set; }
+            public string Body { get; set; }
+            public string Language { get; set; }
+            public string Status { get; set; }  // optional
+        }
         public class CreateArticleDto
         {
             public string Title { get; set; }
@@ -40,6 +50,7 @@
 
         public class ArticleVersionDto
         {
+            public int VersionId { get; set; }
             public int VersionNumber { get; set; }
             public string Language { get; set; }
             public string Title { get; set; }
@@ -66,6 +77,9 @@
         {
             public string Language { get; set; }
         }
-
+        public class VersionCreationResultDto
+        {
+            public bool IsCreated { get; set; }
+        }
     }
 }

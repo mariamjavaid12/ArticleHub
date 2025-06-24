@@ -9,5 +9,6 @@
         public int? ReviewedById { get; set; }
         public User ReviewedBy { get; set; }
         public DateTime? ReviewedAt { get; set; }
+        public DateTime? SubmittedAt { get; set; }
     }
 }

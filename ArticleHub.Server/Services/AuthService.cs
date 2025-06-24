@@ -37,24 +37,24 @@ namespace ArticleManagementSystem.Server.Services
 
             return "User registered successfully.";
         }
-
         public async Task<AuthResponseDto?> LoginAsync(LoginDto dto)
         {
             var user = await _context.Users.SingleOrDefaultAsync(u => u.Username == dto.Username);
-            if (user == null) return null;
+            if (user == null)
+                throw new UnauthorizedAccessException("Username not found");
 
             var result = _hasher.VerifyHashedPassword(user, user.PasswordHash, dto.Password);
-            if (result == PasswordVerificationResult.Failed) return null;
+            if (result == PasswordVerificationResult.Failed)
+                throw new UnauthorizedAccessException("Incorrect password");
 
             var token = _jwtService.GenerateToken(user);
 
-            var responsedto = new AuthResponseDto
+            return new AuthResponseDto
             {
                 Token = token,
                 Username = user.Username,
                 Role = user.Role
             };
-            return responsedto;
         }
 
         public bool ValidateToken()
