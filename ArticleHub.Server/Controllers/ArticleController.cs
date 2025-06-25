@@ -21,15 +21,58 @@ namespace ArticleManagmentAPI.Controllers
             _httpContextAccessor = httpContextAccessor;
         }
 
-        [HttpGet]
-        public async Task<IActionResult> GetAll()
+        //[HttpGet]
+        //public async Task<IActionResult> GetAll()
+        //{
+        //    var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
+        //    var role = User.FindFirst(ClaimTypes.Role)?.Value;
+        //    var articles = await _articleService.GetAllUserArticlesAsync(userId, role);
+        //    return Ok(articles);
+        //}
+        [HttpGet("{articleId}/version/{versionNumber}")]
+        [Authorize(Roles = "Editor,Author")]
+        public async Task<IActionResult> GetArticleVersion(int articleId, int versionNumber)
         {
-            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value);
-            var role = User.FindFirst(ClaimTypes.Role)?.Value;
-            var articles = await _articleService.GetAllArticlesAsync(userId, role);
-            return Ok(articles);
+            var version = await _articleService.GetArticleVersionAsync(articleId, versionNumber);
+
+            if (version == null)
+                return NotFound("Article version not found");
+
+            return Ok(version);
         }
 
+        [HttpPost("{articleId}/versions/{versionNumber}/review/{decision}")]
+        [Authorize(Roles = "Editor")]
+        public async Task<IActionResult> ReviewVersion(int articleId, int versionNumber, string decision)
+        {
+            var reviewerId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0"); // Or ClaimTypes.NameIdentifier if that's used
+
+            if (decision != "approve" && decision != "reject")
+                return BadRequest("Invalid decision");
+
+            var result = await _articleService.ReviewVersionAsync(articleId, versionNumber, decision, reviewerId);
+
+            if (!result)
+                return NotFound("Article version not found or already reviewed");
+
+            return Ok(new { message = $"Version {decision}d successfully." });
+        }
+        [HttpGet("versions/reviewed-by-me")]
+        [Authorize(Roles = "Editor")]
+        public async Task<IActionResult> GetReviewedByMe()
+        {
+            var reviewerIdClaim = User.FindFirst(ClaimTypes.NameIdentifier)?.Value;
+
+            if (string.IsNullOrEmpty(reviewerIdClaim))
+                return Unauthorized("User ID not found in token.");
+
+            if (!int.TryParse(reviewerIdClaim, out var reviewerId))
+                return BadRequest("Invalid user ID.");
+
+            var reviewed = await _articleService.GetReviewedByEditorAsync(reviewerId);
+            return Ok(reviewed);
+        }
+        
         [HttpGet("{id}")]
         public async Task<IActionResult> Get(int id)
         {
@@ -99,6 +142,24 @@ namespace ArticleManagmentAPI.Controllers
         {
             var success = await _articleService.SubmitVersionAsync(versionId);
             return success ? Ok(new { message = "Submitted successfully" }) : NotFound();
+        }
+        [HttpGet]
+        [Authorize(Roles = "Editor,Author")]
+        public async Task<IActionResult> GetAllArticles()
+        {
+            var userId = int.Parse(User.FindFirst(ClaimTypes.NameIdentifier)?.Value ?? "0");
+            var role = User.FindFirst(ClaimTypes.Role)?.Value ?? "";
+
+            var articles = await _articleService.GetAllArticlesAsync(userId, role);
+            return Ok(articles);
+        }
+
+        [HttpGet("versions/pending")]
+        [Authorize(Roles = "Editor")]
+        public async Task<IActionResult> GetPendingArticles()
+        {
+            var pending = await _articleService.GetPendingReviewsAsync();
+            return Ok(pending);
         }
 
         [Authorize(Roles = "Author")]

@@ -18,6 +18,8 @@ const ViewVersions = () => {
     const { showSnackbar } = useSnackbar();
     const navigate = useNavigate();
 
+    // Get current role from localStorage
+    const role = localStorage.getItem('role');
     useEffect(() => {
         const fetchVersions = async () => {
             try {
@@ -48,7 +50,6 @@ const ViewVersions = () => {
         if (!window.confirm("Are you sure you want to submit this article version?")) return;
 
         try {
-
             await axios.post(`/articles/versions/${versionId}/submit`);
             showSnackbar("Submitted to editor successfully!", "success");
             setVersions(prev =>
@@ -76,7 +77,14 @@ const ViewVersions = () => {
                 <Button
                     variant="outlined"
                     startIcon={<ArrowBackIcon />}
-                    onClick={() => navigate('/author/articles')}
+                    onClick={() => {
+                       
+                        if (role === 'Editor') {
+                            navigate('/editor/articles');
+                        } else if (role === 'Author') {
+                            navigate('/author/articles');
+                        } 
+                    }}
                 >
                     Back
                 </Button>
@@ -148,40 +156,44 @@ const ViewVersions = () => {
                                         variant="outlined"
                                         sx={{ ml: 1 }}
                                         onClick={() =>
-                                            navigate(`/author/articles/${articleId}/version/${version.language}/${version.versionNumber}`)
+                                            navigate(`/articles/${articleId}/version/${version.language}/${version.versionNumber}`)
                                         }
                                     >
                                         View
                                     </Button>
 
-                                    <Button
-                                        variant="outlined"
-                                        sx={{ ml: 1 }}
-                                        onClick={() =>
-                                            navigate(`/author/articles/${articleId}/edit`)
-                                        }
-                                    >
-                                        Edit
-                                    </Button>
+                                    {role !== 'Editor' && (
+                                        <>
+                                            <Button
+                                                variant="outlined"
+                                                sx={{ ml: 1 }}
+                                                onClick={() =>
+                                                    navigate(`/author/articles/${articleId}/edit`)
+                                                }
+                                            >
+                                                Edit
+                                            </Button>
 
-                                    <Button
-                                        variant="outlined"
-                                        color="error"
-                                        sx={{ ml: 1 }}
-                                        disabled={version.status !== "Draft"}
-                                        onClick={() => handleDelete(version)}
-                                    >
-                                        Delete
-                                    </Button>
+                                            <Button
+                                                variant="outlined"
+                                                color="error"
+                                                sx={{ ml: 1 }}
+                                                disabled={version.status !== "Draft"}
+                                                onClick={() => handleDelete(version)}
+                                            >
+                                                Delete
+                                            </Button>
 
-                                    <Button
-                                        variant="contained"
-                                        sx={{ ml: 1 }}
-                                        disabled={version.status !== "Draft"}
-                                        onClick={() => handleSubmitToEditor(version.versionNumber)}
-                                    >
-                                        Submit
-                                    </Button>
+                                            <Button
+                                                variant="contained"
+                                                sx={{ ml: 1 }}
+                                                disabled={version.status !== "Draft"}
+                                                onClick={() => handleSubmitToEditor(version.versionNumber)}
+                                            >
+                                                Submit
+                                            </Button>
+                                        </>
+                                    )}
                                 </TableCell>
                             </TableRow>
                         ))}

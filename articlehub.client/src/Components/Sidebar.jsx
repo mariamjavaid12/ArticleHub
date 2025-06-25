@@ -4,14 +4,13 @@ import {
     IconButton, Divider, Toolbar, Typography, Box
 } from '@mui/material';
 import HomeIcon from '@mui/icons-material/Home';
+import PendingActionsIcon from '@mui/icons-material/PendingActions';
+
 import {
     Menu as MenuIcon,
     Dashboard as DashboardIcon,
     NoteAdd as NoteAddIcon,
-    History as HistoryIcon,
-    GTranslate as GTranslateIcon,
     Article as ArticleIcon,
-    Language as LanguageIcon,
     Logout as LogoutIcon
 } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
@@ -36,10 +35,10 @@ const Sidebar = ({ open, toggleSidebar }) => {
     ];
 
     const editorItems = [
-        { label: 'Review Submissions', icon: <DashboardIcon />, path: '/editor' },
+        { label: 'Home', icon: <HomeIcon />, path: '/editor' },
+        { label: 'Pending Reviews', icon: <PendingActionsIcon />, path: '/editor/pending' },
+        { label: 'Reviewed Articles', icon: <PendingActionsIcon />, path: '/editor/reviewed-by-me' },
         { label: 'All Articles', icon: <ArticleIcon />, path: '/editor/articles' },
-        { label: 'Version History', icon: <HistoryIcon />, path: '/editor/versions' },
-        { label: 'Languages', icon: <LanguageIcon />, path: '/editor/languages' }
     ];
 
     const items = user?.role === 'Editor' ? editorItems : authorItems;

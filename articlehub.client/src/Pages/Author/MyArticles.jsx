@@ -105,7 +105,7 @@ const MyArticles = () => {
                                         <Button
                                             variant="outlined"
                                             onClick={() =>
-                                                navigate(`/author/articles/${article.id}/versions`)
+                                                navigate(`/articles/${article.id}/versions`)
                                             }
                                         >
                                             View Versions

@@ -13,18 +13,22 @@ namespace ArticleManagementSystem.Server.Services
         {
             _context = context;
         }
-
         public async Task<List<ArticleDto>> GetAllArticlesAsync(int userId, string role)
         {
+            var isEditor = role.Equals("Editor", StringComparison.OrdinalIgnoreCase);
+
             return await _context.Articles
-                .Include(a => a.Author)
-                .Include(a => a.Versions)
-                .Where(a => role == "Editor" || a.AuthorId == userId)
-                .Select(a => new ArticleDto
-                {
-                    Id = a.Id,
-                    AuthorUsername = a.Author.Username,
-                    Versions = a.Versions.Select(v => new ArticleVersionDto
+            .Include(a => a.Author)
+            .Include(a => a.Versions)
+                .ThenInclude(v => v.Submission)
+            .Where(a => isEditor || a.AuthorId == userId)
+            .Select(a => new ArticleDto
+            {
+                Id = a.Id,
+                AuthorUsername = a.Author.Username,
+                Versions = a.Versions
+                    .Where(v => v.Submission != null)
+                    .Select(v => new ArticleVersionDto
                     {
                         VersionNumber = v.VersionNumber,
                         Language = v.Language,
@@ -34,8 +38,32 @@ namespace ArticleManagementSystem.Server.Services
                         CreatedAt = v.CreatedAt,
                         Status = v.Submission.Status
                     }).ToList()
-                }).ToListAsync();
+            })
+            .ToListAsync();
         }
+
+        //public async Task<List<ArticleDto>> GetAllUserArticlesAsync(int userId, string role)
+        //{
+        //    return await _context.Articles
+        //        .Include(a => a.Author)
+        //        .Include(a => a.Versions)
+        //        .Where(a => role == "Editor" || a.AuthorId == userId)
+        //        .Select(a => new ArticleDto
+        //        {
+        //            Id = a.Id,
+        //            AuthorUsername = a.Author.Username,
+        //            Versions = a.Versions.Select(v => new ArticleVersionDto
+        //            {
+        //                VersionNumber = v.VersionNumber,
+        //                Language = v.Language,
+        //                Title = v.Title,
+        //                Abstract = v.Abstract,
+        //                Body = v.Body,
+        //                CreatedAt = v.CreatedAt,
+        //                Status = v.Submission.Status
+        //            }).ToList()
+        //        }).ToListAsync();
+        //}
 
         public async Task<ArticleDto?> GetArticleByIdAsync(int id)
         {
@@ -189,12 +217,15 @@ namespace ArticleManagementSystem.Server.Services
                     v.Language == language &&
                     v.VersionNumber == versionNumber);
 
-            if (version == null || version.Submission?.Status != "Draft")
+            // Only allow deleting versions that exist AND are in Draft status
+            if (version == null || version.Submission == null || version.Submission.Status != "Draft")
                 return false;
 
+            // Remove dependent submission first if cascade delete is not configured
+            _context.Submissions.Remove(version.Submission);
             _context.ArticleVersions.Remove(version);
-            await _context.SaveChangesAsync();
 
+            await _context.SaveChangesAsync();
             return true;
         }
 
@@ -219,6 +250,25 @@ namespace ArticleManagementSystem.Server.Services
         //    await _context.SaveChangesAsync();
         //    return newVersion;
         //}
+        public async Task<List<PendingReviewDto>> GetPendingReviewsAsync()
+        {
+            return await _context.ArticleVersions
+                .Where(v => v.Submission != null && v.Submission.Status == "Submitted")
+                .Include(v => v.Article)
+                    .ThenInclude(a => a.Author)
+                .Select(v => new PendingReviewDto
+                {
+                    ArticleId = v.ArticleId,
+                    VersionId = v.Id,
+                    VersionNumber = v.VersionNumber,
+                    Title = v.Title,
+                    Language = v.Language,
+                    AuthorUsername = v.Article.Author.Username,
+                    CreatedAt = v.CreatedAt
+                })
+                .ToListAsync();
+        }
+
         public async Task<bool> DeleteDraftArticleAsync(int articleId)
         {
             var article = await _context.Articles
@@ -237,6 +287,74 @@ namespace ArticleManagementSystem.Server.Services
             await _context.SaveChangesAsync();
             return true;
         }
+        public async Task<ArticleVersionDto> GetArticleVersionAsync(int articleId, int versionNumber)
+        {
+            var version = await _context.ArticleVersions
+                .Include(v => v.Article)
+                    .ThenInclude(a => a.Author)
+                .FirstOrDefaultAsync(v => v.ArticleId == articleId && v.VersionNumber == versionNumber);
+
+            if (version == null)
+                return null;
+
+            return new ArticleVersionDto
+            {
+                ArticleId = version.ArticleId,
+                VersionId = version.Id,
+                VersionNumber = version.VersionNumber,
+                Title = version.Title,
+                Abstract = version.Abstract,
+                Body = version.Body,
+                Language = version.Language,
+                CreatedAt = version.CreatedAt,
+                AuthorUsername = version.Article.Author.Username
+            };
+        }
+
+        public async Task<bool> ReviewVersionAsync(int articleId, int versionNumber, string action, int reviewerId)
+        {
+            var version = await _context.ArticleVersions
+                .Include(v => v.Submission)
+                .FirstOrDefaultAsync(v =>
+                    v.ArticleId == articleId &&
+                    v.VersionNumber == versionNumber &&
+                    v.Submission != null &&
+                    v.Submission.Status == "Submitted");
+
+            if (version == null)
+                return false;
+
+            version.Submission.Status = action == "approve" ? "Approved" : "Rejected";
+            version.Submission.ReviewedById = reviewerId;
+            version.Submission.ReviewedAt = DateTime.UtcNow;
+
+            await _context.SaveChangesAsync();
+            return true;
+        }
+        public async Task<List<ReviewedArticleVersionDto>> GetReviewedByEditorAsync(int reviewerId)
+        {
+            var versions = await _context.ArticleVersions
+                .Include(v => v.Submission)
+                .Include(v => v.Article)
+                .ThenInclude(a => a.Author)
+                .Where(v => v.Submission != null && v.Submission.ReviewedById == reviewerId)
+                .Select(v => new ReviewedArticleVersionDto
+                {
+                    VersionId = v.Id,
+                    ArticleId = v.ArticleId,
+                    Title = v.Title,
+                    Language = v.Language,
+                    VersionNumber = v.VersionNumber,
+                    CreatedAt = v.CreatedAt,
+                    Status = v.Submission.Status,
+                    AuthorUsername = v.Article.Author.Username,
+                    ReviewedAt = v.Submission.ReviewedAt
+                })
+                .ToListAsync();
+
+            return versions;
+        }
+
 
         public async Task<bool> SubmitVersionAsync(int versionNumber)
         {

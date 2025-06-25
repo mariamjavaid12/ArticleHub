@@ -14,6 +14,11 @@ import ViewVersions from './Pages/Author/ViewVersions';
 import ViewArticle from './Pages/Author/ViewArticle';
 import EditArticle from './Pages/Author/EditArticle';
 
+import AllArticles from './Pages/Editor/AllArticles';
+import PendingReview from './Pages/Editor/PendingReview ';
+import ReviewArticle from './Pages/Editor/ReviewArticle';
+import ReviewedByMe from './Pages/Editor/ReviewedByMe';
+
 const App = () => {
     return (
         <SnackbarProvider>
@@ -29,16 +34,6 @@ const App = () => {
                     <PrivateRoute roles={['Author']}>
                         <DashboardLayout>
                             <AuthorDashboard />
-                        </DashboardLayout>
-                    </PrivateRoute>
-                }
-            />
-            <Route
-                path="/editor"
-                element={
-                    <PrivateRoute roles={['Editor']}>
-                        <DashboardLayout>
-                            <EditorDashboard />
                         </DashboardLayout>
                     </PrivateRoute>
                 }
@@ -64,9 +59,9 @@ const App = () => {
                 }
                 />
                 <Route
-                    path="/author/articles/:articleId/versions"
+                    path="/articles/:articleId/versions"
                     element={
-                        <PrivateRoute roles={['Author']}>
+                        <PrivateRoute roles={['Author', 'Editor']}>
                             <DashboardLayout>
                                 <ViewVersions />
                             </DashboardLayout>
@@ -75,9 +70,9 @@ const App = () => {
                 />
                
                 <Route
-                    path="/author/articles/:articleId/version/:language/:versionNumber"
+                    path="/articles/:articleId/version/:language/:versionNumber"
                     element={
-                        <PrivateRoute roles={['Author']}>
+                        <PrivateRoute roles={['Author', 'Editor']}>
                             <DashboardLayout>
                                 <ViewArticle />
                             </DashboardLayout>
@@ -90,6 +85,56 @@ const App = () => {
                         <PrivateRoute roles={['Author']}>
                             <DashboardLayout>
                                 <EditArticle />
+                            </DashboardLayout>
+                        </PrivateRoute>
+                    }
+                />
+                <Route
+                    path="/editor"
+                    element={
+                        <PrivateRoute roles={['Editor']}>
+                            <DashboardLayout>
+                                <EditorDashboard />
+                            </DashboardLayout>
+                        </PrivateRoute>
+                    }
+                />
+                <Route
+                    path="/editor/articles"
+                    element={
+                        <PrivateRoute roles={['Editor']}>
+                            <DashboardLayout>
+                                <AllArticles />
+                            </DashboardLayout>
+                        </PrivateRoute>
+                    }
+                />
+                <Route
+                    path="/editor/pending"
+                    element={
+                        <PrivateRoute roles={['Editor']}>
+                            <DashboardLayout>
+                                <PendingReview />
+                            </DashboardLayout>
+                        </PrivateRoute>
+                    }
+                />
+                <Route
+                    path="/editor/review/article/:articleId/version/:versionNumber"
+                    element={
+                        <PrivateRoute roles={['Editor']}>
+                            <DashboardLayout>
+                                <ReviewArticle />
+                            </DashboardLayout>
+                        </PrivateRoute>
+                    }
+                />
+                <Route
+                    path="/editor/reviewed-by-me"
+                    element={
+                        <PrivateRoute roles={['Editor']}>
+                            <DashboardLayout>
+                                <ReviewedByMe />
                             </DashboardLayout>
                         </PrivateRoute>
                     }

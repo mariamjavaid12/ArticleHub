@@ -1,84 +1,71 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import {
-    Container, Typography, Table, TableHead, TableRow,
-    TableCell, TableBody, Button, Paper
+    Box, Typography, Container, Grid, Card, CardContent
 } from '@mui/material';
-import axios from '../../api/axios';
+import { useAuth } from '../../auth/AuthContext';
+import { useNavigate } from 'react-router-dom';
+import PendingActionsIcon from '@mui/icons-material/PendingActions';
+import ArticleIcon from '@mui/icons-material/Article';
+import HistoryIcon from '@mui/icons-material/History';
+import LanguageIcon from '@mui/icons-material/Language';
+import HomeIcon from '@mui/icons-material/Home';
 
 const EditorDashboard = () => {
-    const [pendingArticles, setPendingArticles] = useState([]);
+    const { user } = useAuth();
+    const navigate = useNavigate();
 
-    useEffect(() => {
-        fetchPendingArticles();
-    }, []);
-
-    const fetchPendingArticles = async () => {
-        try {
-            const response = await axios.get('/api/editor/pending-submissions');
-            setPendingArticles(response.data);
-        } catch (err) {
-            console.error('Error fetching articles:', err);
+    const cards = [
+        {
+            title: 'Pending Reviews',
+            description: 'View and review articles waiting for editorial action.',
+            icon: <PendingActionsIcon sx={{ fontSize: 40, color: 'primary.main' }} />,
+            path: '/editor/pending'
+        },
+        {
+            title: 'All Articles',
+            description: 'Explore all submitted articles across all languages.',
+            icon: <ArticleIcon sx={{ fontSize: 40, color: 'primary.main' }} />,
+            path: '/editor/articles'
+        },
+        {
+            title: 'Reviewed Articles History',
+            description: 'See all version history and editorial decisions.',
+            icon: <HistoryIcon sx={{ fontSize: 40, color: 'primary.main' }} />,
+            path: '/editor/reviewed-by-me'
         }
-    };
-
-    const handleApprove = async (articleId, versionNumber) => {
-        try {
-            await axios.post(`/api/editor/approve`, { articleId, versionNumber });
-            fetchPendingArticles();
-        } catch (err) {
-            console.error('Approval failed:', err);
-        }
-    };
-
-    const handleReject = async (articleId, versionNumber) => {
-        try {
-            await axios.post(`/api/editor/reject`, { articleId, versionNumber });
-            fetchPendingArticles();
-        } catch (err) {
-            console.error('Rejection failed:', err);
-        }
-    };
+    ];
 
     return (
-        <Container>
-            <Typography variant="h4" gutterBottom mt={4}>Pending Article Submissions</Typography>
-            <Paper elevation={3}>
-                <Table>
-                    <TableHead>
-                        <TableRow>
-                            <TableCell>Title</TableCell>
-                            <TableCell>Author</TableCell>
-                            <TableCell>Language</TableCell>
-                            <TableCell>Version</TableCell>
-                            <TableCell>Submitted At</TableCell>
-                            <TableCell align="center">Actions</TableCell>
-                        </TableRow>
-                    </TableHead>
-                    <TableBody>
-                        {pendingArticles.length > 0 ? pendingArticles.map(article => (
-                            <TableRow key={`${article.articleId}-${article.versionNumber}`}>
-                                <TableCell>{article.title}</TableCell>
-                                <TableCell>{article.authorName}</TableCell>
-                                <TableCell>{article.language}</TableCell>
-                                <TableCell>{article.versionNumber}</TableCell>
-                                <TableCell>{new Date(article.createdAt).toLocaleString()}</TableCell>
-                                <TableCell align="center">
-                                    <Button variant="outlined" color="success" onClick={() => handleApprove(article.articleId, article.versionNumber)}>
-                                        Approve
-                                    </Button>
-                                    <Button variant="outlined" color="error" onClick={() => handleReject(article.articleId, article.versionNumber)} sx={{ ml: 1 }}>
-                                        Reject
-                                    </Button>
-                                </TableCell>
-                            </TableRow>
-                        )) : (
-                            <TableRow>
-                                <TableCell colSpan={6} align="center">No pending submissions</TableCell>
-                            </TableRow>
-                        )}
-                    </TableBody>
-                </Table>
-            </Paper>
+        <Container maxWidth="lg">
+            <Box mt={4} mb={4}>
+                <Typography variant="h4" fontWeight={600}>
+                    Welcome, {user?.username || 'Editor'}
+                </Typography>
+                <Typography variant="subtitle1" color="text.secondary" mt={1}>
+                    Manage and review all submitted articles.
+                </Typography>
+            </Box>
+
+            <Grid container spacing={3}>
+                {cards.map((card, index) => (
+                    <Grid item xs={12} sm={6} md={4} key={index}>
+                        <Card
+                            sx={{ p: 2, cursor: 'pointer', '&:hover': { boxShadow: 6 } }}
+                            onClick={() => navigate(card.path)}
+                        >
+                            <CardContent>
+                                {card.icon}
+                                <Typography variant="h6" mt={2}>
+                                    {card.title}
+                                </Typography>
+                                <Typography variant="body2" color="text.secondary">
+                                    {card.description}
+                                </Typography>
+                            </CardContent>
+                        </Card>
+                    </Grid>
+                ))}
+            </Grid>
         </Container>
     );
 };

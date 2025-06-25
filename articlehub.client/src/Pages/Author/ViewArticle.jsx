@@ -42,7 +42,7 @@ const ViewArticle = () => {
                     <Button
                         variant="outlined"
                         startIcon={<ArrowBackIcon />}
-                        onClick={() => navigate(`/author/articles/${articleId}/versions`)}
+                        onClick={() => navigate(`/articles/${articleId}/versions`)}
                     >
                         Back
                     </Button>

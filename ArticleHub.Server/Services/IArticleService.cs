@@ -6,6 +6,7 @@ namespace ArticleManagementSystem.Server.Services
     public interface IArticleService
     {
         Task<List<ArticleDto>> GetAllArticlesAsync(int userId, string role);
+        //Task<List<ArticleDto>> GetAllUserArticlesAsync(int userId, string role);
         Task<ArticleDto?> GetArticleByIdAsync(int id);
         Task<Article> CreateArticleAsync(int userId, CreateArticleDto dto);
         Task<ArticleVersion?> UpdateArticleAsync(int articleId, CreateArticleDto dto);
@@ -16,6 +17,10 @@ namespace ArticleManagementSystem.Server.Services
         Task<bool> DeleteDraftArticleAsync(int articleId);
         Task<bool> SubmitVersionAsync(int versionId);
         Task<bool> DeleteVersionAsync(int articleId, string language, int versionNumber);
+        Task<List<PendingReviewDto>> GetPendingReviewsAsync();
+        Task<ArticleVersionDto> GetArticleVersionAsync(int articleId, int versionNumber);
+        Task<bool> ReviewVersionAsync(int articleId, int versionNumber, string action, int reviewerId);
+        Task<List<ReviewedArticleVersionDto>> GetReviewedByEditorAsync(int reviewerId);
 
     }
 }

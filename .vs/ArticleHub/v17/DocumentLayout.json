@@ -7,28 +7,56 @@
       "RelativeMoniker": "D:0:0:{452ACCFA-84A5-4C0C-8800-65974EF7846D}|articlehub.client\\articlehub.client.esproj|solutionrelative:articlehub.client\\src\\pages\\editor\\editordashboard.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{452ACCFA-84A5-4C0C-8800-65974EF7846D}|articlehub.client\\articlehub.client.esproj|c:\\users\\umar javed\\source\\repos\\articlehub\\articlehub.client\\src\\pages\\author\\viewversions.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{452ACCFA-84A5-4C0C-8800-65974EF7846D}|articlehub.client\\articlehub.client.esproj|solutionrelative:articlehub.client\\src\\pages\\author\\viewversions.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{452ACCFA-84A5-4C0C-8800-65974EF7846D}|articlehub.client\\articlehub.client.esproj|c:\\users\\umar javed\\source\\repos\\articlehub\\articlehub.client\\src\\auth\\register.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{452ACCFA-84A5-4C0C-8800-65974EF7846D}|articlehub.client\\articlehub.client.esproj|solutionrelative:articlehub.client\\src\\auth\\register.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{452ACCFA-84A5-4C0C-8800-65974EF7846D}|articlehub.client\\articlehub.client.esproj|c:\\users\\umar javed\\source\\repos\\articlehub\\articlehub.client\\src\\components\\sidebar.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{452ACCFA-84A5-4C0C-8800-65974EF7846D}|articlehub.client\\articlehub.client.esproj|solutionrelative:articlehub.client\\src\\components\\sidebar.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{452ACCFA-84A5-4C0C-8800-65974EF7846D}|articlehub.client\\articlehub.client.esproj|c:\\users\\umar javed\\source\\repos\\articlehub\\articlehub.client\\src\\pages\\author\\createarticle.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}|",
-      "RelativeMoniker": "D:0:0:{452ACCFA-84A5-4C0C-8800-65974EF7846D}|articlehub.client\\articlehub.client.esproj|solutionrelative:articlehub.client\\src\\pages\\author\\createarticle.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}|"
+      "AbsoluteMoniker": "D:0:0:{452ACCFA-84A5-4C0C-8800-65974EF7846D}|articlehub.client\\articlehub.client.esproj|c:\\users\\umar javed\\source\\repos\\articlehub\\articlehub.client\\src\\pages\\editor\\reviewedbyme.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{452ACCFA-84A5-4C0C-8800-65974EF7846D}|articlehub.client\\articlehub.client.esproj|solutionrelative:articlehub.client\\src\\pages\\editor\\reviewedbyme.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{452ACCFA-84A5-4C0C-8800-65974EF7846D}|articlehub.client\\articlehub.client.esproj|c:\\users\\umar javed\\source\\repos\\articlehub\\articlehub.client\\src\\pages\\author\\authordashboard.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{452ACCFA-84A5-4C0C-8800-65974EF7846D}|articlehub.client\\articlehub.client.esproj|solutionrelative:articlehub.client\\src\\pages\\author\\authordashboard.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+      "AbsoluteMoniker": "D:0:0:{452ACCFA-84A5-4C0C-8800-65974EF7846D}|articlehub.client\\articlehub.client.esproj|c:\\users\\umar javed\\source\\repos\\articlehub\\articlehub.client\\src\\pages\\editor\\reviewarticle.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{452ACCFA-84A5-4C0C-8800-65974EF7846D}|articlehub.client\\articlehub.client.esproj|solutionrelative:articlehub.client\\src\\pages\\editor\\reviewarticle.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C13AE6B-F4E6-49C7-931D-DACF501A25C9}|ArticleHub.Server\\ArticleHub.Server.csproj|c:\\users\\umar javed\\source\\repos\\articlehub\\articlehub.server\\controllers\\articlecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C13AE6B-F4E6-49C7-931D-DACF501A25C9}|ArticleHub.Server\\ArticleHub.Server.csproj|solutionrelative:articlehub.server\\controllers\\articlecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C13AE6B-F4E6-49C7-931D-DACF501A25C9}|ArticleHub.Server\\ArticleHub.Server.csproj|c:\\users\\umar javed\\source\\repos\\articlehub\\articlehub.server\\services\\iarticleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C13AE6B-F4E6-49C7-931D-DACF501A25C9}|ArticleHub.Server\\ArticleHub.Server.csproj|solutionrelative:articlehub.server\\services\\iarticleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8C13AE6B-F4E6-49C7-931D-DACF501A25C9}|ArticleHub.Server\\ArticleHub.Server.csproj|c:\\users\\umar javed\\source\\repos\\articlehub\\articlehub.server\\services\\articleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{8C13AE6B-F4E6-49C7-931D-DACF501A25C9}|ArticleHub.Server\\ArticleHub.Server.csproj|solutionrelative:articlehub.server\\services\\articleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{452ACCFA-84A5-4C0C-8800-65974EF7846D}|articlehub.client\\articlehub.client.esproj|c:\\users\\umar javed\\source\\repos\\articlehub\\articlehub.client\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{452ACCFA-84A5-4C0C-8800-65974EF7846D}|articlehub.client\\articlehub.client.esproj|solutionrelative:articlehub.client\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C13AE6B-F4E6-49C7-931D-DACF501A25C9}|ArticleHub.Server\\ArticleHub.Server.csproj|c:\\users\\umar javed\\source\\repos\\articlehub\\articlehub.server\\dtos\\dtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C13AE6B-F4E6-49C7-931D-DACF501A25C9}|ArticleHub.Server\\ArticleHub.Server.csproj|solutionrelative:articlehub.server\\dtos\\dtos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{452ACCFA-84A5-4C0C-8800-65974EF7846D}|articlehub.client\\articlehub.client.esproj|c:\\users\\umar javed\\source\\repos\\articlehub\\articlehub.client\\src\\pages\\editor\\pendingreview .jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{452ACCFA-84A5-4C0C-8800-65974EF7846D}|articlehub.client\\articlehub.client.esproj|solutionrelative:articlehub.client\\src\\pages\\editor\\pendingreview .jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C13AE6B-F4E6-49C7-931D-DACF501A25C9}|ArticleHub.Server\\ArticleHub.Server.csproj|c:\\users\\umar javed\\source\\repos\\articlehub\\articlehub.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C13AE6B-F4E6-49C7-931D-DACF501A25C9}|ArticleHub.Server\\ArticleHub.Server.csproj|solutionrelative:articlehub.server\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{452ACCFA-84A5-4C0C-8800-65974EF7846D}|articlehub.client\\articlehub.client.esproj|c:\\users\\umar javed\\source\\repos\\articlehub\\articlehub.client\\src\\pages\\editor\\allarticles.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{452ACCFA-84A5-4C0C-8800-65974EF7846D}|articlehub.client\\articlehub.client.esproj|solutionrelative:articlehub.client\\src\\pages\\editor\\allarticles.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{452ACCFA-84A5-4C0C-8800-65974EF7846D}|articlehub.client\\articlehub.client.esproj|c:\\users\\umar javed\\source\\repos\\articlehub\\articlehub.client\\src\\auth\\authcontext.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
+      "RelativeMoniker": "D:0:0:{452ACCFA-84A5-4C0C-8800-65974EF7846D}|articlehub.client\\articlehub.client.esproj|solutionrelative:articlehub.client\\src\\auth\\authcontext.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8C13AE6B-F4E6-49C7-931D-DACF501A25C9}|ArticleHub.Server\\ArticleHub.Server.csproj|c:\\users\\umar javed\\source\\repos\\articlehub\\articlehub.server\\models\\articleversion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8C13AE6B-F4E6-49C7-931D-DACF501A25C9}|ArticleHub.Server\\ArticleHub.Server.csproj|solutionrelative:articlehub.server\\models\\articleversion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{452ACCFA-84A5-4C0C-8800-65974EF7846D}|articlehub.client\\articlehub.client.esproj|c:\\users\\umar javed\\source\\repos\\articlehub\\articlehub.client\\src\\pages\\author\\viewarticle.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
@@ -37,18 +65,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{452ACCFA-84A5-4C0C-8800-65974EF7846D}|articlehub.client\\articlehub.client.esproj|c:\\users\\umar javed\\source\\repos\\articlehub\\articlehub.client\\src\\pages\\author\\myarticles.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
       "RelativeMoniker": "D:0:0:{452ACCFA-84A5-4C0C-8800-65974EF7846D}|articlehub.client\\articlehub.client.esproj|solutionrelative:articlehub.client\\src\\pages\\author\\myarticles.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8C13AE6B-F4E6-49C7-931D-DACF501A25C9}|ArticleHub.Server\\ArticleHub.Server.csproj|c:\\users\\umar javed\\source\\repos\\articlehub\\articlehub.server\\services\\iarticleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8C13AE6B-F4E6-49C7-931D-DACF501A25C9}|ArticleHub.Server\\ArticleHub.Server.csproj|solutionrelative:articlehub.server\\services\\iarticleservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{8C13AE6B-F4E6-49C7-931D-DACF501A25C9}|ArticleHub.Server\\ArticleHub.Server.csproj|c:\\users\\umar javed\\source\\repos\\articlehub\\articlehub.server\\controllers\\articlecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{8C13AE6B-F4E6-49C7-931D-DACF501A25C9}|ArticleHub.Server\\ArticleHub.Server.csproj|solutionrelative:articlehub.server\\controllers\\articlecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{452ACCFA-84A5-4C0C-8800-65974EF7846D}|articlehub.client\\articlehub.client.esproj|c:\\users\\umar javed\\source\\repos\\articlehub\\articlehub.client\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}",
-      "RelativeMoniker": "D:0:0:{452ACCFA-84A5-4C0C-8800-65974EF7846D}|articlehub.client\\articlehub.client.esproj|solutionrelative:articlehub.client\\src\\app.jsx||{14D17961-FE51-464D-9111-C4AF11D7D99A}"
     }
   ],
   "DocumentGroupContainers": [
@@ -68,113 +84,74 @@
               "RelativeDocumentMoniker": "articlehub.client\\src\\Pages\\Editor\\EditorDashboard.jsx",
               "ToolTip": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\Pages\\Editor\\EditorDashboard.jsx",
               "RelativeToolTip": "articlehub.client\\src\\Pages\\Editor\\EditorDashboard.jsx",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAAkAAAAAAAAAAAAAABkAAABKAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-06-24T21:04:29.936Z",
+              "WhenOpened": "2025-06-25T02:12:19.612Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "Register.jsx",
-              "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\auth\\Register.jsx",
-              "RelativeDocumentMoniker": "articlehub.client\\src\\auth\\Register.jsx",
-              "ToolTip": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\auth\\Register.jsx",
-              "RelativeToolTip": "articlehub.client\\src\\auth\\Register.jsx",
-              "ViewState": "AgIAAD8AAAAAAAAAAAAIwFYAAAAhAAAAAAAAAA==",
+              "Title": "ReviewedByMe.jsx",
+              "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\Pages\\Editor\\ReviewedByMe.jsx",
+              "RelativeDocumentMoniker": "articlehub.client\\src\\Pages\\Editor\\ReviewedByMe.jsx",
+              "ToolTip": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\Pages\\Editor\\ReviewedByMe.jsx",
+              "RelativeToolTip": "articlehub.client\\src\\Pages\\Editor\\ReviewedByMe.jsx",
+              "ViewState": "AgIAAEYAAAAAAAAAAAAQwFgAAAAnAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-06-24T20:58:07.476Z",
+              "WhenOpened": "2025-06-25T01:56:45.055Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
-              "Title": "CreateArticle.jsx",
-              "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\Pages\\Author\\CreateArticle.jsx",
-              "RelativeDocumentMoniker": "articlehub.client\\src\\Pages\\Author\\CreateArticle.jsx",
-              "ToolTip": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\Pages\\Author\\CreateArticle.jsx",
-              "RelativeToolTip": "articlehub.client\\src\\Pages\\Author\\CreateArticle.jsx",
-              "ViewState": "AgIAABUAAAAAAAAAAABgvSkAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-06-24T19:05:09.648Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "ViewArticle.jsx",
-              "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\Pages\\Author\\ViewArticle.jsx",
-              "RelativeDocumentMoniker": "articlehub.client\\src\\Pages\\Author\\ViewArticle.jsx",
-              "ToolTip": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\Pages\\Author\\ViewArticle.jsx",
-              "RelativeToolTip": "articlehub.client\\src\\Pages\\Author\\ViewArticle.jsx",
-              "ViewState": "AgIAACgAAAAAAAAAAAAQwEEAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-06-24T20:21:54.478Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Sidebar.jsx",
-              "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\Components\\Sidebar.jsx",
-              "RelativeDocumentMoniker": "articlehub.client\\src\\Components\\Sidebar.jsx",
-              "ToolTip": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\Components\\Sidebar.jsx",
-              "RelativeToolTip": "articlehub.client\\src\\Components\\Sidebar.jsx",
-              "ViewState": "AgIAABsAAAAAMzMzMzMrwCIAAAASAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-06-24T20:21:18.089Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "IArticleService.cs",
-              "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\ArticleHub.Server\\Services\\IArticleService.cs",
-              "RelativeDocumentMoniker": "ArticleHub.Server\\Services\\IArticleService.cs",
-              "ToolTip": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\ArticleHub.Server\\Services\\IArticleService.cs",
-              "RelativeToolTip": "ArticleHub.Server\\Services\\IArticleService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAZAAAAAAAAAA==",
+              "Title": "ArticleController.cs",
+              "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\ArticleHub.Server\\Controllers\\ArticleController.cs",
+              "RelativeDocumentMoniker": "ArticleHub.Server\\Controllers\\ArticleController.cs",
+              "ToolTip": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\ArticleHub.Server\\Controllers\\ArticleController.cs",
+              "RelativeToolTip": "ArticleHub.Server\\Controllers\\ArticleController.cs",
+              "ViewState": "AgIAADkAAAAAAAAAAAApwD8AAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T19:47:05.939Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "ViewVersions.jsx",
-              "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\Pages\\Author\\ViewVersions.jsx",
-              "RelativeDocumentMoniker": "articlehub.client\\src\\Pages\\Author\\ViewVersions.jsx",
-              "ToolTip": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\Pages\\Author\\ViewVersions.jsx",
-              "RelativeToolTip": "articlehub.client\\src\\Pages\\Author\\ViewVersions.jsx",
-              "ViewState": "AgIAADwAAAAAAAAAAAAkwFAAAAAYAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-06-24T18:59:14.43Z",
+              "WhenOpened": "2025-06-25T00:29:03.068Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "AuthorDashboard.jsx",
-              "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\Pages\\Author\\AuthorDashboard.jsx",
-              "RelativeDocumentMoniker": "articlehub.client\\src\\Pages\\Author\\AuthorDashboard.jsx",
-              "ToolTip": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\Pages\\Author\\AuthorDashboard.jsx",
-              "RelativeToolTip": "articlehub.client\\src\\Pages\\Author\\AuthorDashboard.jsx",
-              "ViewState": "AgIAADUAAAAAZ2ZmZmYswDwAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-06-24T20:46:40.427Z",
+              "Title": "IArticleService.cs",
+              "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\ArticleHub.Server\\Services\\IArticleService.cs",
+              "RelativeDocumentMoniker": "ArticleHub.Server\\Services\\IArticleService.cs",
+              "ToolTip": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\ArticleHub.Server\\Services\\IArticleService.cs",
+              "RelativeToolTip": "ArticleHub.Server\\Services\\IArticleService.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAA5wBcAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-24T23:55:27.374Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "MyArticles.jsx",
-              "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\Pages\\Author\\MyArticles.jsx",
-              "RelativeDocumentMoniker": "articlehub.client\\src\\Pages\\Author\\MyArticles.jsx",
-              "ToolTip": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\Pages\\Author\\MyArticles.jsx",
-              "RelativeToolTip": "articlehub.client\\src\\Pages\\Author\\MyArticles.jsx",
-              "ViewState": "AgIAAFsAAAAAAAAAAAAIwHwAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 1,
+              "Title": "Sidebar.jsx",
+              "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\Components\\Sidebar.jsx",
+              "RelativeDocumentMoniker": "articlehub.client\\src\\Components\\Sidebar.jsx",
+              "ToolTip": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\Components\\Sidebar.jsx",
+              "RelativeToolTip": "articlehub.client\\src\\Components\\Sidebar.jsx",
+              "ViewState": "AgIAABUAAAAAAAAAAAAAACcAAABhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-06-24T17:39:51.498Z",
+              "WhenOpened": "2025-06-25T01:46:07.671Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "ReviewArticle.jsx",
+              "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\Pages\\Editor\\ReviewArticle.jsx",
+              "RelativeDocumentMoniker": "articlehub.client\\src\\Pages\\Editor\\ReviewArticle.jsx",
+              "ToolTip": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\Pages\\Editor\\ReviewArticle.jsx",
+              "RelativeToolTip": "articlehub.client\\src\\Pages\\Editor\\ReviewArticle.jsx",
+              "ViewState": "AgIAAD8AAAAAAAAAAAAAwFEAAABDAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-06-25T00:13:12.081Z",
               "EditorCaption": ""
             },
             {
@@ -185,35 +162,126 @@
               "RelativeDocumentMoniker": "ArticleHub.Server\\Services\\ArticleService.cs",
               "ToolTip": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\ArticleHub.Server\\Services\\ArticleService.cs",
               "RelativeToolTip": "ArticleHub.Server\\Services\\ArticleService.cs",
-              "ViewState": "AgIAAOcAAABAAAAAAAAuwPIAAAAMAAAAAAAAAA==",
+              "ViewState": "AgIAAFIBAAAAAAAAAAAswGIBAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T10:02:44.764Z",
+              "WhenOpened": "2025-06-24T23:46:00.012Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "ArticleController.cs",
-              "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\ArticleHub.Server\\Controllers\\ArticleController.cs",
-              "RelativeDocumentMoniker": "ArticleHub.Server\\Controllers\\ArticleController.cs",
-              "ToolTip": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\ArticleHub.Server\\Controllers\\ArticleController.cs",
-              "RelativeToolTip": "ArticleHub.Server\\Controllers\\ArticleController.cs",
-              "ViewState": "AgIAAEUAAAAAAAAAAAAqwFQAAAAlAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-06-24T09:57:21.334Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 7,
               "Title": "App.jsx",
               "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\App.jsx",
               "RelativeDocumentMoniker": "articlehub.client\\src\\App.jsx",
               "ToolTip": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\App.jsx",
               "RelativeToolTip": "articlehub.client\\src\\App.jsx",
-              "ViewState": "AgIAAD0AAAAAAAAAAAAUwFsAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAIQAAAAwAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
-              "WhenOpened": "2025-06-24T13:39:03.388Z",
+              "WhenOpened": "2025-06-25T00:21:43.724Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "DTOs.cs",
+              "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\ArticleHub.Server\\DTOs\\DTOs.cs",
+              "RelativeDocumentMoniker": "ArticleHub.Server\\DTOs\\DTOs.cs",
+              "ToolTip": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\ArticleHub.Server\\DTOs\\DTOs.cs",
+              "RelativeToolTip": "ArticleHub.Server\\DTOs\\DTOs.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAxwGIAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T00:25:24.495Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "PendingReview .jsx",
+              "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\Pages\\Editor\\PendingReview .jsx",
+              "RelativeDocumentMoniker": "articlehub.client\\src\\Pages\\Editor\\PendingReview .jsx",
+              "ToolTip": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\Pages\\Editor\\PendingReview .jsx",
+              "RelativeToolTip": "articlehub.client\\src\\Pages\\Editor\\PendingReview .jsx",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAB4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-06-24T23:43:22.782Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\ArticleHub.Server\\Program.cs",
+              "RelativeDocumentMoniker": "ArticleHub.Server\\Program.cs",
+              "ToolTip": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\ArticleHub.Server\\Program.cs",
+              "RelativeToolTip": "ArticleHub.Server\\Program.cs",
+              "ViewState": "AgIAAEgAAAAAAAAAAAAAAE8AAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T00:42:21.498Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "AllArticles.jsx",
+              "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\Pages\\Editor\\AllArticles.jsx",
+              "RelativeDocumentMoniker": "articlehub.client\\src\\Pages\\Editor\\AllArticles.jsx",
+              "ToolTip": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\Pages\\Editor\\AllArticles.jsx",
+              "RelativeToolTip": "articlehub.client\\src\\Pages\\Editor\\AllArticles.jsx",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-06-25T01:05:50.131Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "AuthContext.jsx",
+              "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\auth\\AuthContext.jsx",
+              "RelativeDocumentMoniker": "articlehub.client\\src\\auth\\AuthContext.jsx",
+              "ToolTip": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\auth\\AuthContext.jsx",
+              "RelativeToolTip": "articlehub.client\\src\\auth\\AuthContext.jsx",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAAA8AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-06-25T01:07:01.665Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "ArticleVersion.cs",
+              "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\ArticleHub.Server\\Models\\ArticleVersion.cs",
+              "RelativeDocumentMoniker": "ArticleHub.Server\\Models\\ArticleVersion.cs",
+              "ToolTip": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\ArticleHub.Server\\Models\\ArticleVersion.cs",
+              "RelativeToolTip": "ArticleHub.Server\\Models\\ArticleVersion.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T00:18:16.282Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "MyArticles.jsx",
+              "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\Pages\\Author\\MyArticles.jsx",
+              "RelativeDocumentMoniker": "articlehub.client\\src\\Pages\\Author\\MyArticles.jsx",
+              "ToolTip": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\Pages\\Author\\MyArticles.jsx",
+              "RelativeToolTip": "articlehub.client\\src\\Pages\\Author\\MyArticles.jsx",
+              "ViewState": "AgIAAGAAAAAAAAAAAAAAAGsAAAA6AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-06-24T23:36:03.972Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "ViewArticle.jsx",
+              "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\Pages\\Author\\ViewArticle.jsx",
+              "RelativeDocumentMoniker": "articlehub.client\\src\\Pages\\Author\\ViewArticle.jsx",
+              "ToolTip": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\articlehub.client\\src\\Pages\\Author\\ViewArticle.jsx",
+              "RelativeToolTip": "articlehub.client\\src\\Pages\\Author\\ViewArticle.jsx",
+              "ViewState": "AgIAABIAAAAAAAAAAAAAACwAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003663|",
+              "WhenOpened": "2025-06-24T23:25:31.079Z",
               "EditorCaption": ""
             }
           ]
