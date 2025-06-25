@@ -1,0 +1,71 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\APITestProject\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{1631DA84-7B1C-4D57-B654-76C6B6C3E13C}|APITestProject.csproj|c:\\users\\umar javed\\source\\repos\\articlehub\\apitestproject\\authservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1631DA84-7B1C-4D57-B654-76C6B6C3E13C}|APITestProject.csproj|solutionrelative:authservicetest.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1631DA84-7B1C-4D57-B654-76C6B6C3E13C}|APITestProject.csproj|c:\\users\\umar javed\\source\\repos\\articlehub\\apitestproject\\unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1631DA84-7B1C-4D57-B654-76C6B6C3E13C}|APITestProject.csproj|solutionrelative:unittest1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1631DA84-7B1C-4D57-B654-76C6B6C3E13C}|APITestProject.csproj|c:\\users\\umar javed\\source\\repos\\articlehub\\apitestproject\\apitestproject.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|",
+      "RelativeMoniker": "D:0:0:{1631DA84-7B1C-4D57-B654-76C6B6C3E13C}|APITestProject.csproj|solutionrelative:apitestproject.csproj||{FA3CD31E-987B-443A-9B81-186104E8DAC1}|"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "AuthServiceTest.cs",
+              "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\APITestProject\\AuthServiceTest.cs",
+              "RelativeDocumentMoniker": "AuthServiceTest.cs",
+              "ToolTip": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\APITestProject\\AuthServiceTest.cs*",
+              "RelativeToolTip": "AuthServiceTest.cs*",
+              "ViewState": "AgIAAFcAAAAAAAAAAAAUwGIAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T14:20:30.488Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "APITestProject",
+              "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\APITestProject\\APITestProject.csproj",
+              "RelativeDocumentMoniker": "APITestProject.csproj",
+              "ToolTip": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\APITestProject\\APITestProject.csproj",
+              "RelativeToolTip": "APITestProject.csproj",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABsAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000758|",
+              "WhenOpened": "2025-06-25T14:17:48.288Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "UnitTest1.cs",
+              "DocumentMoniker": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\APITestProject\\UnitTest1.cs",
+              "RelativeDocumentMoniker": "UnitTest1.cs",
+              "ToolTip": "C:\\Users\\Umar Javed\\source\\repos\\ArticleHub\\APITestProject\\UnitTest1.cs",
+              "RelativeToolTip": "UnitTest1.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-06-25T14:05:17.585Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

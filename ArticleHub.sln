@@ -1,11 +1,13 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.12.35707.178 d17.12
+VisualStudioVersion = 17.12.35707.178
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ArticleHub.Server", "ArticleHub.Server\ArticleHub.Server.csproj", "{8C13AE6B-F4E6-49C7-931D-DACF501A25C9}"
 EndProject
 Project("{54A90642-561A-4BB1-A94E-469ADEE60C69}") = "articlehub.client", "articlehub.client\articlehub.client.esproj", "{452ACCFA-84A5-4C0C-8800-65974EF7846D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "APITestProject", "APITestProject\APITestProject.csproj", "{766164E2-D155-4596-8EEF-97B20F5806EA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,6 +25,10 @@ Global
 		{452ACCFA-84A5-4C0C-8800-65974EF7846D}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{452ACCFA-84A5-4C0C-8800-65974EF7846D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{452ACCFA-84A5-4C0C-8800-65974EF7846D}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{766164E2-D155-4596-8EEF-97B20F5806EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{766164E2-D155-4596-8EEF-97B20F5806EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{766164E2-D155-4596-8EEF-97B20F5806EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{766164E2-D155-4596-8EEF-97B20F5806EA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -45,9 +45,9 @@ const EditArticle = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         try {
-            const res = await axios.post(`/articles/${id}/versions`, form);
+            await axios.post(`/articles/${id}/versions`, form);
             showSnackbar("Article updated successfully!", "success");
-            navigate(`/author/articles/${id}/versions`);
+            navigate(`/articles/${id}/versions`);
         } catch (err) {
             if (err.response && err.response.status === 400 && err.response.data === "No changes detected. Article was not updated.") {
                 showSnackbar("No changes detected. Version not created.", "info");

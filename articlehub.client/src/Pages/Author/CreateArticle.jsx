@@ -7,6 +7,12 @@ import axios from '../../api/axios';
 import { useSnackbar } from '../SnackbarContext ';
 import { useNavigate } from 'react-router-dom';
 
+const urduFont = {
+    fontFamily: "'Noto Nastaliq Urdu', serif",
+    direction: 'rtl',
+    textAlign: 'right'
+};
+
 const CreateArticle = () => {
     const [form, setForm] = useState({
         title: '',
@@ -15,12 +21,13 @@ const CreateArticle = () => {
         language: 'en'
     });
 
+    const isUrdu = form.language === 'ur';
+    const navigate = useNavigate();
+    const { showSnackbar } = useSnackbar();
+
     const handleChange = (e) => {
         setForm({ ...form, [e.target.name]: e.target.value });
     };
-
-    const navigate = useNavigate();
-    const { showSnackbar } = useSnackbar();
 
     const handleSubmit = async (e) => {
         e.preventDefault();
@@ -36,6 +43,14 @@ const CreateArticle = () => {
 
     return (
         <Container maxWidth="md" sx={{ mt: 4 }}>
+            {/* Urdu font stylesheet */}
+            {isUrdu && (
+                <link
+                    href="https://fonts.googleapis.com/css2?family=Noto+Nastaliq+Urdu&display=swap"
+                    rel="stylesheet"
+                />
+            )}
+
             <Card elevation={4}>
                 <CardContent>
                     <Typography variant="h4" fontWeight={600} gutterBottom>
@@ -55,6 +70,8 @@ const CreateArticle = () => {
                             value={form.title}
                             onChange={handleChange}
                             required
+                            inputProps={{ dir: isUrdu ? 'rtl' : 'ltr' }}
+                            sx={isUrdu ? urduFont : {}}
                         />
                         <TextField
                             fullWidth
@@ -64,6 +81,8 @@ const CreateArticle = () => {
                             value={form.abstract}
                             onChange={handleChange}
                             required
+                            inputProps={{ dir: isUrdu ? 'rtl' : 'ltr' }}
+                            sx={isUrdu ? urduFont : {}}
                         />
                         <TextField
                             fullWidth
@@ -75,6 +94,8 @@ const CreateArticle = () => {
                             value={form.body}
                             onChange={handleChange}
                             required
+                            inputProps={{ dir: isUrdu ? 'rtl' : 'ltr' }}
+                            sx={isUrdu ? urduFont : {}}
                         />
 
                         <FormControl fullWidth margin="normal" required>
@@ -110,3 +131,17 @@ const CreateArticle = () => {
 };
 
 export default CreateArticle;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
