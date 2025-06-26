@@ -6,13 +6,14 @@ import {
 } from '@mui/material';
 import { useNavigate } from 'react-router-dom';
 import axios from '../../api/axios';
-
+import { useTranslation } from 'react-i18next';
 const MyArticles = () => {
     const [articles, setArticles] = useState([]);
     const [languageFilter, setLanguageFilter] = useState('All');
     const [titleSearch, setTitleSearch] = useState('');
     const navigate = useNavigate();
-
+    const { t, i18n } = useTranslation();
+    const isUrdu = i18n.language === 'ur';
     useEffect(() => {
         const fetchArticles = async () => {
             try {
@@ -45,30 +46,31 @@ const MyArticles = () => {
     return (
         <Container>
             <Typography variant="h4" gutterBottom mt={4}>
-                My Articles
+                {t('myArticles')}
             </Typography>
 
             {/* Filters */}
             <Box display="flex" gap={2} mb={2} flexWrap="wrap">
                 <FormControl sx={{ minWidth: 180 }}>
-                    <InputLabel>Language</InputLabel>
+                    <InputLabel>{t('language')}</InputLabel>
                     <Select
                         value={languageFilter}
-                        label="Language"
+                        label={t('language')}
                         onChange={(e) => setLanguageFilter(e.target.value)}
                     >
-                        <MenuItem value="All">All</MenuItem>
-                        <MenuItem value="en">English</MenuItem>
-                        <MenuItem value="ur">Urdu</MenuItem>
-                        <MenuItem value="fr">French</MenuItem>
+                        <MenuItem value="All">{t('all')}</MenuItem>
+                        <MenuItem value="en">{t('english')}</MenuItem>
+                        <MenuItem value="ur">{t('urdu')}</MenuItem>
+                        <MenuItem value="fr">{t('french')}</MenuItem>
                     </Select>
                 </FormControl>
 
                 <TextField
-                    label="Search by Title"
+                    label={t('searchByTitle')}
                     value={titleSearch}
                     onChange={(e) => setTitleSearch(e.target.value)}
                     sx={{ minWidth: 240 }}
+                    inputProps={{ dir: isUrdu ? 'rtl' : 'ltr' }}
                 />
             </Box>
 
@@ -77,12 +79,12 @@ const MyArticles = () => {
                 <Table>
                     <TableHead>
                         <TableRow>
-                            <TableCell>Article ID</TableCell>
-                            <TableCell>Title</TableCell>
-                            <TableCell>Language</TableCell>
-                            <TableCell>Version Count</TableCell>
-                            <TableCell>Created At</TableCell>
-                            <TableCell>Actions</TableCell>
+                            <TableCell>{t('articleId')}</TableCell>
+                            <TableCell>{t('title')}</TableCell>
+                            <TableCell>{t('language')}</TableCell>
+                            <TableCell>{t('versionCount')}</TableCell>
+                            <TableCell>{t('createdAt')}</TableCell>
+                            <TableCell>{t('actions')}</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -108,7 +110,7 @@ const MyArticles = () => {
                                                 navigate(`/articles/${article.id}/versions`)
                                             }
                                         >
-                                            View Versions
+                                            {t('viewVersions')}
                                         </Button>
                                     </TableCell>
                                 </TableRow>

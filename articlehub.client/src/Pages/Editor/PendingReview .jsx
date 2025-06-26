@@ -6,12 +6,12 @@ import {
 import axios from '../../api/axios';
 import { useSnackbar } from '../../Context/SnackbarContext ';
 import { useNavigate } from 'react-router-dom';
-
+import { useTranslation } from 'react-i18next';
 const PendingReview = () => {
     const [pendingVersions, setPendingVersions] = useState([]);
     const { showSnackbar } = useSnackbar();
     const navigate = useNavigate();
-
+    const { t } = useTranslation();
     useEffect(() => {
         const fetchPending = async () => {
             try {
@@ -23,7 +23,7 @@ const PendingReview = () => {
             }
         };
         fetchPending();
-    }, []);
+    }, [showSnackbar]);
 
     const handleAction = async (articleId, versionNumber, action) => {
         try {
@@ -40,19 +40,19 @@ const PendingReview = () => {
     return (
         <Container>
             <Box mt={4} mb={2}>
-                <Typography variant="h4">Pending Article Reviews</Typography>
+                <Typography variant="h4">{t('pendingArticleReviews')}</Typography>
             </Box>
 
             <Paper elevation={3}>
                 <Table>
                     <TableHead>
                         <TableRow>
-                            <TableCell>Article Title</TableCell>
-                            <TableCell>Language</TableCell>
-                            <TableCell>Version</TableCell>
-                            <TableCell>Author</TableCell>
-                            <TableCell>Created At</TableCell>
-                            <TableCell>Actions</TableCell>
+                            <TableCell>{t('articleTitle')}</TableCell>
+                            <TableCell>{t('language')}</TableCell>
+                            <TableCell>{t('version')}</TableCell>
+                            <TableCell>{t('author')}</TableCell>
+                            <TableCell>{t('createdAt')}</TableCell>
+                            <TableCell>{t('actions')}</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -71,7 +71,7 @@ const PendingReview = () => {
                                             navigate(`/editor/review/article/${version.articleId}/version/${version.versionNumber}`)
                                         }
                                     >
-                                        View
+                                        {t('view')}
                                     </Button>
                                     <Button
                                         variant="contained"
@@ -79,14 +79,14 @@ const PendingReview = () => {
                                         sx={{ mr: 1 }}
                                         onClick={() => handleAction(version.articleId, version.versionNumber, 'approve')}
                                     >
-                                        Approve
+                                        {t('approve')}
                                     </Button>
                                     <Button
                                         variant="contained"
                                         color="error"
                                         onClick={() => handleAction(version.articleId, version.versionNumber, 'reject')}
                                     >
-                                        Reject
+                                        {t('reject')}
                                     </Button>
                                 </TableCell>
                             </TableRow>

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Routes, Route } from 'react-router-dom';
 import Login from './auth/Login';
 import Register from './auth/Register';
@@ -18,8 +18,13 @@ import AllArticles from './Pages/Editor/AllArticles';
 import PendingReview from './Pages/Editor/PendingReview ';
 import ReviewArticle from './Pages/Editor/ReviewArticle';
 import ReviewedByMe from './Pages/Editor/ReviewedByMe';
+import { useTranslation } from 'react-i18next';
 
 const App = () => {
+    const { i18n } = useTranslation();
+    useEffect(() => {
+        document.body.setAttribute('dir', i18n.language === 'ur' ? 'rtl' : 'ltr');
+    }, [i18n.language]);
     return (
         <SnackbarProvider>
         <Routes>

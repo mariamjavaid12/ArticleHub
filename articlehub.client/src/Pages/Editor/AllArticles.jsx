@@ -5,11 +5,13 @@ import {
 } from '@mui/material';
 import axios from '../../api/axios';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const AllArticles = () => {
     const [articles, setArticles] = useState([]);
     const navigate = useNavigate();
-
+    const { t, i18n } = useTranslation();
+    const isUrdu = i18n.language === 'ur';
     useEffect(() => {
         fetchArticles();
     }, []);
@@ -23,57 +25,67 @@ const AllArticles = () => {
         }
     };
 
+    const urduFont = {
+        fontFamily: 'Noto Nastaliq Urdu, serif',
+        direction: 'rtl'
+    };
+
     return (
-        <Container maxWidth="lg">
-            <Typography variant="h4" mt={4} mb={3}>All Articles</Typography>
+        <Container maxWidth="lg" sx={isUrdu ? urduFont : {}}>
+            <Typography variant="h4" mt={4} mb={3}>
+                {t('allArticles')}
+            </Typography>
 
             <Paper elevation={3}>
                 <Table>
                     <TableHead>
                         <TableRow>
-                            <TableCell>Article ID</TableCell>
-                            <TableCell>Title</TableCell>
-                            <TableCell>Language</TableCell>
-                            <TableCell>Version Count</TableCell>
-                            <TableCell>Created At</TableCell>
-                            <TableCell>Actions</TableCell>
+                            <TableCell>{t('articleId')}</TableCell>
+                            <TableCell>{t('title')}</TableCell>
+                            <TableCell>{t('language')}</TableCell>
+                            <TableCell>{t('versionCount')}</TableCell>
+                            <TableCell>{t('createdAt')}</TableCell>
+                            <TableCell>{t('actions')}</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
                         {articles.length > 0 ? articles.map(article => {
-                            const versions = article.versions;
+                            const versions = article.versions || [];
                             const latest = versions.length > 0
                                 ? [...versions].sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt))[0]
                                 : null;
 
                             const createdAt = latest?.createdAt
                                 ? new Date(latest.createdAt).toLocaleString()
-                                : 'N/A';
+                                : t('notAvailable');
 
                             return (
                                 <TableRow key={article.id}>
                                     <TableCell>{article.id}</TableCell>
-                                    <TableCell>{latest?.title || 'Untitled'}</TableCell>
-                                    <TableCell>{latest?.language || 'N/A'}</TableCell>
+                                    <TableCell>{latest?.title || t('untitled')}</TableCell>
+                                    <TableCell>{latest?.language || t('notAvailable')}</TableCell>
                                     <TableCell>{versions.length}</TableCell>
-                                    <TableCell>{createdAt}</TableCell>
+                                    <TableCell>
+                                        <span dir="ltr" style={{ fontFamily: 'monospace' }}>{createdAt}</span>
+                                    </TableCell>
                                     <TableCell>
                                         <Button
                                             variant="outlined"
                                             onClick={() => navigate(`/articles/${article.id}/versions`)}
                                         >
-                                            View Versions
+                                            {t('viewVersions')}
                                         </Button>
                                     </TableCell>
                                 </TableRow>
                             );
                         }) : (
                             <TableRow>
-                                <TableCell colSpan={6} align="center">No articles found.</TableCell>
+                                <TableCell colSpan={6} align="center">
+                                    {t('noArticles')}
+                                </TableCell>
                             </TableRow>
                         )}
                     </TableBody>
-
                 </Table>
             </Paper>
         </Container>

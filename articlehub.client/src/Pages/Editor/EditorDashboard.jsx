@@ -9,27 +9,27 @@ import ArticleIcon from '@mui/icons-material/Article';
 import HistoryIcon from '@mui/icons-material/History';
 import LanguageIcon from '@mui/icons-material/Language';
 import HomeIcon from '@mui/icons-material/Home';
-
+import { useTranslation } from 'react-i18next';
 const EditorDashboard = () => {
     const { user } = useAuth();
     const navigate = useNavigate();
-
+    const { t } = useTranslation();
     const cards = [
         {
-            title: 'Pending Reviews',
-            description: 'View and review articles waiting for editorial action.',
+            title: t('pendingReviews'),
+            description: t('pendingReviewsDesc'),
             icon: <PendingActionsIcon sx={{ fontSize: 40, color: 'primary.main' }} />,
             path: '/editor/pending'
         },
         {
-            title: 'All Articles',
-            description: 'Explore all submitted articles across all languages.',
+            title: t('allArticles'),
+            description: t('allArticlesDesc'),
             icon: <ArticleIcon sx={{ fontSize: 40, color: 'primary.main' }} />,
             path: '/editor/articles'
         },
         {
-            title: 'Reviewed Articles History',
-            description: 'See all version history and editorial decisions.',
+            title: t('reviewedArticles'),
+            description: t('reviewedArticlesDesc'),
             icon: <HistoryIcon sx={{ fontSize: 40, color: 'primary.main' }} />,
             path: '/editor/reviewed-by-me'
         }
@@ -39,10 +39,10 @@ const EditorDashboard = () => {
         <Container maxWidth="lg">
             <Box mt={4} mb={4}>
                 <Typography variant="h4" fontWeight={600}>
-                    Welcome, {user?.username || 'Editor'}
+                    {t('welcome')}, {user?.username || t('editor')}
                 </Typography>
                 <Typography variant="subtitle1" color="text.secondary" mt={1}>
-                    Manage and review all submitted articles.
+                    {t('editorDashboardSubtitle')}
                 </Typography>
             </Box>
 

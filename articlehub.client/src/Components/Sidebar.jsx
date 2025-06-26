@@ -15,13 +15,16 @@ import {
 } from '@mui/icons-material';
 import { useNavigate } from 'react-router-dom';
 import { useAuth } from '../auth/AuthContext';
+import { useTranslation } from 'react-i18next';
 
 const drawerWidth = 240;
 
 const Sidebar = ({ open, toggleSidebar }) => {
     const navigate = useNavigate();
     const { logout, user } = useAuth();
-
+    const { t, i18n } = useTranslation();
+    const isRTL = i18n.language === 'ur';
+    const drawerSide = isRTL ? 'right' : 'left';
     const commonStyles = {
         width: open ? drawerWidth : 60,
         transition: 'width 0.3s',
@@ -29,16 +32,16 @@ const Sidebar = ({ open, toggleSidebar }) => {
     };
 
     const authorItems = [
-        { label: 'Home', icon: <HomeIcon />, path: '/author' },
-        { label: 'My Articles', icon: <DashboardIcon />, path: '/author/articles' },
-        { label: 'New Article', icon: <NoteAddIcon />, path: '/author/new-article' }
+        { label: t('home'), icon: <HomeIcon />, path: '/author' },
+        { label: t('myArticles'), icon: <DashboardIcon />, path: '/author/articles' },
+        { label: t('newArticle'), icon: <NoteAddIcon />, path: '/author/new-article' }
     ];
 
     const editorItems = [
-        { label: 'Home', icon: <HomeIcon />, path: '/editor' },
-        { label: 'Pending Reviews', icon: <PendingActionsIcon />, path: '/editor/pending' },
-        { label: 'Reviewed Articles', icon: <PendingActionsIcon />, path: '/editor/reviewed-by-me' },
-        { label: 'All Articles', icon: <ArticleIcon />, path: '/editor/articles' },
+        { label: t('home'), icon: <HomeIcon />, path: '/editor' },
+        { label: t('pendingReviews'), icon: <PendingActionsIcon />, path: '/editor/pending' },
+        { label: t('reviewedByMe'), icon: <PendingActionsIcon />, path: '/editor/reviewed-by-me' },
+        { label: t('allArticles'), icon: <ArticleIcon />, path: '/editor/articles' }
     ];
 
     const items = user?.role === 'Editor' ? editorItems : authorItems;
@@ -46,7 +49,9 @@ const Sidebar = ({ open, toggleSidebar }) => {
     return (
         <Drawer
             variant="permanent"
+            anchor={drawerSide}
             sx={{
+                [drawerSide]: 0, // dynamically position left/right
                 width: commonStyles.width,
                 flexShrink: 0,
                 '& .MuiDrawer-paper': {
@@ -59,7 +64,7 @@ const Sidebar = ({ open, toggleSidebar }) => {
                 <IconButton onClick={toggleSidebar}>
                     <MenuIcon />
                 </IconButton>
-                {open && <Typography ml={1} variant="h6">Dashboard</Typography>}
+                {open && <Typography ml={1} variant="h6">{t('dashboard')}</Typography>}
             </Toolbar>
 
             <Divider />
@@ -74,7 +79,7 @@ const Sidebar = ({ open, toggleSidebar }) => {
 
                 <ListItemButton onClick={logout}>
                     <ListItemIcon><LogoutIcon /></ListItemIcon>
-                    {open && <ListItemText primary="Logout" />}
+                    {open && <ListItemText primary={t('logout')} />}
                 </ListItemButton>
             </List>
         </Drawer>

@@ -7,7 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import ArticleIcon from '@mui/icons-material/Description';
 import AddCircleIcon from '@mui/icons-material/AddCircleOutline';
 import ListAltIcon from '@mui/icons-material/ListAlt';
-
+import { useTranslation } from 'react-i18next';
 const AuthorDashboard = () => {
     const { user } = useAuth();
     const navigate = useNavigate();
@@ -19,15 +19,15 @@ const AuthorDashboard = () => {
     const handleMyArticles = () => {
         navigate('/author/articles');
     };
-
+    const { t } = useTranslation();
     return (
         <Container maxWidth="lg">
             <Box mt={4} mb={4}>
                 <Typography variant="h4" fontWeight={600}>
-                    Welcome, {user?.username || 'Author'}
+                    {t('welcome')}, {user?.username || t('author')}
                 </Typography>
                 <Typography variant="subtitle1" color="text.secondary" mt={1}>
-                    Start writing or manage your submitted articles.
+                    {t('startWriting')}
                 </Typography>
             </Box>
 
@@ -37,10 +37,10 @@ const AuthorDashboard = () => {
                         <CardContent>
                             <AddCircleIcon sx={{ fontSize: 40, color: 'primary.main' }} />
                             <Typography variant="h6" mt={2}>
-                                Add New Article
+                                {t('addNewArticle')}
                             </Typography>
                             <Typography variant="body2" color="text.secondary">
-                                Start a fresh article draft in your preferred language.
+                                {t('startDraft')}
                             </Typography>
                         </CardContent>
                     </Card>
@@ -51,10 +51,10 @@ const AuthorDashboard = () => {
                         <CardContent>
                             <ListAltIcon sx={{ fontSize: 40, color: 'primary.main' }} />
                             <Typography variant="h6" mt={2}>
-                                My Articles
+                                {t('myArticles')}
                             </Typography>
                             <Typography variant="body2" color="text.secondary">
-                                View and manage your drafts and submissions.
+                                {t('viewManageDrafts')}
                             </Typography>
                         </CardContent>
                     </Card>

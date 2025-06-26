@@ -5,12 +5,13 @@ import {
     Container, Box, TextField, Button, Typography, MenuItem
 } from '@mui/material';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Register = () => {
-    const [form, setForm] = useState({ username: '', password: '', role: 'Author' });
+    const [form, setForm] = useState({ username: '', password: '', role: 'Author', languagePreference: 'en' });
     const [errors, setErrors] = useState({});
     const navigate = useNavigate();
-
+    const { t } = useTranslation();
     const validate = () => {
         const newErrors = {};
 
@@ -50,41 +51,52 @@ const Register = () => {
                     <TextField
                         fullWidth
                         margin="normal"
-                        label="Username"
+                        label={t('username')}
                         value={form.username}
                         onChange={e => setForm({ ...form, username: e.target.value })}
                         error={!!errors.username}
-                        helperText={errors.username}
+                        helperText={errors.username && t(errors.username)}
                     />
                     <TextField
                         fullWidth
                         margin="normal"
                         type="password"
-                        label="Password"
+                        label={t('password')}
                         value={form.password}
                         onChange={e => setForm({ ...form, password: e.target.value })}
                         error={!!errors.password}
-                        helperText={errors.password}
+                        helperText={errors.password && t(errors.password)}
                     />
                     <TextField
                         fullWidth
                         margin="normal"
                         select
-                        label="Role"
+                        label={t('role')}
                         value={form.role}
                         onChange={e => setForm({ ...form, role: e.target.value })}
                     >
-                        <MenuItem value="Author">Author</MenuItem>
-                        <MenuItem value="Editor">Editor</MenuItem>
+                        <MenuItem value="Author">{t('author')}</MenuItem>
+                        <MenuItem value="Editor">{t('editor')}</MenuItem>
+                    </TextField>
+                    <TextField
+                        fullWidth
+                        margin="normal"
+                        select
+                        label={t('language')}
+                        value={form.languagePreference}
+                        onChange={e => setForm({ ...form, languagePreference: e.target.value })}
+                    >
+                        <MenuItem value="en">{t('english')}</MenuItem>
+                        <MenuItem value="ur">{t('urdu')}</MenuItem>
                     </TextField>
                     <Button fullWidth variant="contained" color="primary" type="submit" sx={{ mt: 2 }}>
-                        Register
+                        {t('register')}
                     </Button>
 
                     <Typography variant="body2" align="center" sx={{ mt: 2 }}>
-                        Already have an account?{' '}
+                        {t('alreadyAccount')}{" "}
                         <Link to="/login" style={{ color: '#1976d2', textDecoration: 'none' }}>
-                            Login
+                            {t('login')}
                         </Link>
                     </Typography>
                 </form>

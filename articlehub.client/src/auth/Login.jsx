@@ -6,6 +6,7 @@ import {
 import axios from '../api/axios';
 import { useAuth } from './AuthContext';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation  } from 'react-i18next';
 
 const Login = () => {
     const [form, setForm] = useState({ username: '', password: '' });
@@ -13,6 +14,7 @@ const Login = () => {
     const [loginError, setLoginError] = useState('');
     const { login } = useAuth();
     const navigate = useNavigate();
+    const { t, i18n } = useTranslation();
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoginError('');
@@ -32,6 +34,10 @@ const Login = () => {
                 setLoginError('Invalid response from server');
                 return;
             }
+
+            const lang = res.data.languagePreference || 'en';
+            i18n.changeLanguage(lang);
+            localStorage.setItem('i18nextLng', lang);
 
             if (rememberMe) {
                 localStorage.setItem('token', token);
@@ -54,41 +60,43 @@ const Login = () => {
                     <TextField
                         fullWidth
                         margin="normal"
-                        label="Username"
+                        label={t('username')}
                         value={form.username}
                         onChange={e => setForm({ ...form, username: e.target.value })}
                     />
+
                     <TextField
                         fullWidth
                         margin="normal"
                         type="password"
-                        label="Password"
+                        label={t('password')}
                         value={form.password}
                         onChange={e => setForm({ ...form, password: e.target.value })}
                     />
 
                     <FormControlLabel
                         control={<Checkbox checked={rememberMe} onChange={e => setRememberMe(e.target.checked)} />}
-                        label="Remember me"
+                        label={t('rememberMe')}
                     />
 
                     {loginError && (
                         <Typography color="error" variant="body2" mt={1}>
-                            {loginError}
+                            {t(loginError)} {/* Or show directly if it's a message string */}
                         </Typography>
                     )}
 
                     <Button fullWidth variant="contained" color="primary" type="submit" sx={{ mt: 2 }}>
-                        Login
+                        {t('login')}
                     </Button>
 
                     <Typography variant="body2" textAlign="center" mt={2}>
-                        Don't have an account?{" "}
+                        {t('noAccount')}{" "}
                         <Link onClick={() => navigate('/register')} sx={{ cursor: 'pointer' }}>
-                            Sign up
+                            {t('signup')}
                         </Link>
                     </Typography>
                 </form>
+
             </Box>
         </Container>
     );

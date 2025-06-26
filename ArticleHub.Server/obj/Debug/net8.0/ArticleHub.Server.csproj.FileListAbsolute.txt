@@ -1,6 +1,8 @@
 C:\Users\Umar Javed\source\repos\ArticleHub\ArticleHub.Server\bin\Debug\net8.0\spa.proxy.json
 C:\Users\Umar Javed\source\repos\ArticleHub\ArticleHub.Server\bin\Debug\net8.0\appsettings.Development.json
 C:\Users\Umar Javed\source\repos\ArticleHub\ArticleHub.Server\bin\Debug\net8.0\appsettings.json
+C:\Users\Umar Javed\source\repos\ArticleHub\ArticleHub.Server\bin\Debug\net8.0\package-lock.json
+C:\Users\Umar Javed\source\repos\ArticleHub\ArticleHub.Server\bin\Debug\net8.0\package.json
 C:\Users\Umar Javed\source\repos\ArticleHub\ArticleHub.Server\bin\Debug\net8.0\ArticleHub.Server.staticwebassets.endpoints.json
 C:\Users\Umar Javed\source\repos\ArticleHub\ArticleHub.Server\bin\Debug\net8.0\ArticleHub.Server.exe
 C:\Users\Umar Javed\source\repos\ArticleHub\ArticleHub.Server\bin\Debug\net8.0\ArticleHub.Server.deps.json
@@ -168,10 +170,10 @@ C:\Users\Umar Javed\source\repos\ArticleHub\ArticleHub.Server\obj\Debug\net8.0\s
 C:\Users\Umar Javed\source\repos\ArticleHub\ArticleHub.Server\obj\Debug\net8.0\staticwebassets\msbuild.buildMultiTargeting.ArticleHub.Server.props
 C:\Users\Umar Javed\source\repos\ArticleHub\ArticleHub.Server\obj\Debug\net8.0\staticwebassets\msbuild.buildTransitive.ArticleHub.Server.props
 C:\Users\Umar Javed\source\repos\ArticleHub\ArticleHub.Server\obj\Debug\net8.0\staticwebassets.pack.json
-C:\Users\Umar Javed\source\repos\ArticleHub\ArticleHub.Server\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt
 C:\Users\Umar Javed\source\repos\ArticleHub\ArticleHub.Server\obj\Debug\net8.0\ArticleH.41FC6C11.Up2Date
 C:\Users\Umar Javed\source\repos\ArticleHub\ArticleHub.Server\obj\Debug\net8.0\ArticleHub.Server.dll
 C:\Users\Umar Javed\source\repos\ArticleHub\ArticleHub.Server\obj\Debug\net8.0\refint\ArticleHub.Server.dll
 C:\Users\Umar Javed\source\repos\ArticleHub\ArticleHub.Server\obj\Debug\net8.0\ArticleHub.Server.pdb
 C:\Users\Umar Javed\source\repos\ArticleHub\ArticleHub.Server\obj\Debug\net8.0\ArticleHub.Server.genruntimeconfig.cache
 C:\Users\Umar Javed\source\repos\ArticleHub\ArticleHub.Server\obj\Debug\net8.0\ref\ArticleHub.Server.dll
+C:\Users\Umar Javed\source\repos\ArticleHub\ArticleHub.Server\obj\Debug\net8.0\staticwebassets.upToDateCheck.txt

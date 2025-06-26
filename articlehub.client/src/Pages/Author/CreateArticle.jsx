@@ -6,7 +6,7 @@ import {
 import axios from '../../api/axios';
 import { useSnackbar } from '../../Context/SnackbarContext ';
 import { useNavigate } from 'react-router-dom';
-
+import { useTranslation } from 'react-i18next';
 const urduFont = {
     fontFamily: "'Noto Nastaliq Urdu', serif",
     direction: 'rtl',
@@ -20,7 +20,7 @@ const CreateArticle = () => {
         body: '',
         language: 'en'
     });
-
+    const { t } = useTranslation();
     const isUrdu = form.language === 'ur';
     const navigate = useNavigate();
     const { showSnackbar } = useSnackbar();
@@ -54,10 +54,10 @@ const CreateArticle = () => {
             <Card elevation={4}>
                 <CardContent>
                     <Typography variant="h4" fontWeight={600} gutterBottom>
-                        Add New Article
+                        {t('addNewArticle')}
                     </Typography>
                     <Typography variant="subtitle1" color="text.secondary" gutterBottom>
-                        Start a new draft by filling out the fields below.
+                        {t('startDraft')}
                     </Typography>
                     <Divider sx={{ my: 2 }} />
 
@@ -65,7 +65,7 @@ const CreateArticle = () => {
                         <TextField
                             fullWidth
                             name="title"
-                            label="Title"
+                            label={t('title')}
                             margin="normal"
                             value={form.title}
                             onChange={handleChange}
@@ -76,7 +76,7 @@ const CreateArticle = () => {
                         <TextField
                             fullWidth
                             name="abstract"
-                            label="Abstract"
+                            label={t('abstract')}
                             margin="normal"
                             value={form.abstract}
                             onChange={handleChange}
@@ -87,7 +87,7 @@ const CreateArticle = () => {
                         <TextField
                             fullWidth
                             name="body"
-                            label="Body"
+                            label={t('body')}
                             multiline
                             rows={6}
                             margin="normal"
@@ -99,16 +99,16 @@ const CreateArticle = () => {
                         />
 
                         <FormControl fullWidth margin="normal" required>
-                            <InputLabel id="language-label">Language</InputLabel>
+                            <InputLabel id="language-label">{t('language')}</InputLabel>
                             <Select
                                 labelId="language-label"
                                 name="language"
                                 value={form.language}
                                 onChange={handleChange}
                             >
-                                <MenuItem value="en">English</MenuItem>
-                                <MenuItem value="ur">Urdu</MenuItem>
-                                <MenuItem value="fr">French</MenuItem>
+                                <MenuItem value="en">{t('english')}</MenuItem>
+                                <MenuItem value="ur">{t('urdu')}</MenuItem>
+                                <MenuItem value="fr">{t('french')}</MenuItem>
                             </Select>
                         </FormControl>
 
@@ -120,7 +120,7 @@ const CreateArticle = () => {
                                 size="large"
                                 sx={{ mt: 3 }}
                             >
-                                Submit Article
+                                {t('submitArticle')}
                             </Button>
                         </Box>
                     </Box>

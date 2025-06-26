@@ -5,13 +5,13 @@ import {
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from '../../api/axios';
 import { useSnackbar } from '../../Context/SnackbarContext ';
-
+import { useTranslation } from 'react-i18next';
 const ReviewArticle = () => {
-    const { versionId } = useParams();
+    //const { versionId } = useParams();
     const [version, setVersion] = useState(null);
     const { showSnackbar } = useSnackbar();
     const navigate = useNavigate();
-
+    const { t } = useTranslation();
     const { articleId, versionNumber } = useParams();
     useEffect(() => {
         const fetchVersion = async () => {
@@ -24,7 +24,7 @@ const ReviewArticle = () => {
             }
         };
         fetchVersion();
-    }, [versionId]);
+    }, [articleId, versionNumber, showSnackbar]);
 
     const handleAction = async (action) => {
         try {
@@ -44,15 +44,15 @@ const ReviewArticle = () => {
             <Box mt={4} mb={2}>
                 <Typography variant="h4">{version.title}</Typography>
                 <Typography variant="subtitle1" color="textSecondary">
-                    Author: {version.authorUsername} | Language: {version.language} | Version: {version.versionNumber} | Created: {new Date(version.createdAt).toLocaleString()}
+                    {t('author')}: {version.authorUsername} | {t('language')}: {version.language} | {t('version')}: {version.versionNumber} | {t('createdAt')}: {new Date(version.createdAt).toLocaleString()}
                 </Typography>
             </Box>
 
             <Paper elevation={3} sx={{ p: 3, mb: 3 }}>
-                <Typography variant="h6">Abstract</Typography>
+                <Typography variant="h6">{t('abstract')}</Typography>
                 <Typography>{version.abstract}</Typography>
                 <Divider sx={{ my: 2 }} />
-                <Typography variant="h6">Body</Typography>
+                <Typography variant="h6">{t('body')}</Typography>
                 <Typography>{version.body}</Typography>
             </Paper>
 
@@ -62,26 +62,26 @@ const ReviewArticle = () => {
                     color="success"
                     onClick={() => handleAction('approve')}
                 >
-                    Approve
+                    {t('approve')}
                 </Button>
                 <Button
                     variant="contained"
                     color="error"
                     onClick={() => handleAction('reject')}
                 >
-                    Reject
+                    {t('reject')}
                 </Button>
                 <Button
                     variant="outlined"
                     onClick={() => navigate('/editor/pending')}
                 >
-                    Back to Pending List
+                    {t('backToPending')}
                 </Button>
                 <Button
                     variant="outlined"
                     onClick={() => navigate('/editor/reviewed-by-me')}
                 >
-                    Back to Reviewed List
+                    {t('backToReviewed')}
                 </Button>
             </Box>
         </Container>

@@ -5,7 +5,7 @@ import {
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from '../../api/axios';
 import { useSnackbar } from '../../Context/SnackbarContext ';
-
+import { useTranslation } from 'react-i18next';
 const EditArticle = () => {
     const { id } = useParams(); // Article ID
     const [form, setForm] = useState({
@@ -16,7 +16,12 @@ const EditArticle = () => {
     });
     const navigate = useNavigate();
     const { showSnackbar } = useSnackbar();
-
+    const { t, i18n } = useTranslation();
+    const isUrdu = i18n.language === 'ur';
+    const urduFont = {
+        fontFamily: 'Noto Nastaliq Urdu, serif',
+        direction: 'rtl'
+    };
     useEffect(() => {
         const fetchLatestVersion = async () => {
             try {
@@ -61,47 +66,58 @@ const EditArticle = () => {
     return (
         <Container maxWidth="md">
             <Box mt={4}>
-                <Typography variant="h4" gutterBottom>
-                    Edit Article
+                <Typography
+                    variant="h4"
+                    gutterBottom
+                    sx={isUrdu ? urduFont : {}}
+                >
+                    {t('editArticle')}
                 </Typography>
                 <form onSubmit={handleSubmit}>
                     <TextField
                         fullWidth
-                        label="Title"
+                        label={t('title')}
                         name="title"
                         margin="normal"
                         value={form.title}
                         onChange={handleChange}
+                        inputProps={{ dir: isUrdu ? 'rtl' : 'ltr' }}
+                        sx={isUrdu ? urduFont : {}}
                     />
                     <TextField
                         fullWidth
-                        label="Abstract"
+                        label={t('abstract')}
                         name="abstract"
                         margin="normal"
                         value={form.abstract}
                         onChange={handleChange}
+                        inputProps={{ dir: isUrdu ? 'rtl' : 'ltr' }}
+                        sx={isUrdu ? urduFont : {}}
                     />
                     <TextField
                         fullWidth
-                        label="Body"
+                        label={t('body')}
                         name="body"
                         multiline
                         rows={6}
                         margin="normal"
                         value={form.body}
                         onChange={handleChange}
+                        inputProps={{ dir: isUrdu ? 'rtl' : 'ltr' }}
+                        sx={isUrdu ? urduFont : {}}
                     />
                     <TextField
                         fullWidth
-                        label="Language"
+                        label={t('language')}
                         name="language"
                         margin="normal"
                         value={form.language}
                         onChange={handleChange}
-                        disabled // prevent editing language when editing
+                        disabled
+                        inputProps={{ dir: 'ltr' }}
                     />
                     <Button type="submit" variant="contained" sx={{ mt: 2 }}>
-                        Save Changes
+                        {t('saveChanges')}
                     </Button>
                 </form>
             </Box>

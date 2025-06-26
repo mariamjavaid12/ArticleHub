@@ -5,13 +5,14 @@ import {
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from '../../api/axios';
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
-
+import { useTranslation } from 'react-i18next';
 const ViewArticle = () => {
     const { articleId, language, versionNumber } = useParams();
     const [article, setArticle] = useState(null);
     const [loading, setLoading] = useState(true);
     const navigate = useNavigate();
-
+    const { t, i18n } = useTranslation();
+    const isUrdu = i18n.language === 'ur';
     useEffect(() => {
         const fetchArticle = async () => {
             try {
@@ -37,32 +38,72 @@ const ViewArticle = () => {
     return (
         <Container maxWidth="md" sx={{ mt: 4 }}>
             <Paper elevation={3} sx={{ p: 4, borderRadius: 3 }}>
-                <Box display="flex" justifyContent="space-between" alignItems="center" mb={2}>
-                    <Typography variant="h4" fontWeight={600}>{article.title}</Typography>
+                <Box
+                    display="flex"
+                    justifyContent="space-between"
+                    alignItems="center"
+                    mb={2}
+                    sx={{ flexDirection: isUrdu ? 'row-reverse' : 'row' }}
+                >
+                    <Typography
+                        variant="h4"
+                        fontWeight={600}
+                        sx={{ fontFamily: isUrdu ? 'Noto Nastaliq Urdu' : 'inherit', direction: isUrdu ? 'rtl' : 'ltr' }}
+                    >
+                        {article.title}
+                    </Typography>
                     <Button
                         variant="outlined"
                         startIcon={<ArrowBackIcon />}
                         onClick={() => navigate(`/articles/${articleId}/versions`)}
                     >
-                        Back
+                        {t('back')}
                     </Button>
                 </Box>
 
-                <Typography variant="subtitle2" color="text.secondary" mb={2}>
-                    Language: <strong>{article.language}</strong> &nbsp;|&nbsp;
-                    Version: <strong>{article.versionNumber}</strong> &nbsp;|&nbsp;
-                    Created At: <strong>{new Date(article.createdAt).toLocaleString()}</strong>
+                <Typography
+                    variant="subtitle2"
+                    color="text.secondary"
+                    mb={2}
+                    sx={{
+                        direction: isUrdu ? 'rtl' : 'ltr',
+                        fontFamily: isUrdu ? 'Noto Nastaliq Urdu' : 'inherit'
+                    }}
+                >
+                    {t('language')}: <strong><span dir="ltr" style={{ fontFamily: 'monospace' }}>{article.language}</span></strong> &nbsp;|&nbsp;
+                    {t('version')}: <strong><span dir="ltr" style={{ fontFamily: 'monospace' }}>{article.versionNumber}</span></strong> &nbsp;|&nbsp;
+                    {t('createdAt')}: <strong><span dir="ltr" style={{ fontFamily: 'monospace' }}>{new Date(article.createdAt).toLocaleString()}</span></strong>
                 </Typography>
 
                 <Divider sx={{ my: 3 }} />
 
-                <Typography variant="h7" gutterBottom><b>Abstract:</b> {article.abstract}</Typography>
-                {/*<Typography variant="body1" paragraph>{article.abstract}</Typography>*/}
+                <Typography
+                    variant="subtitle1"
+                    gutterBottom
+                    sx={{ direction: isUrdu ? 'rtl' : 'ltr', fontFamily: isUrdu ? 'Noto Nastaliq Urdu' : 'inherit' }}
+                >
+                    <strong>{t('abstract')}:</strong> {article.abstract}
+                </Typography>
 
                 <Divider sx={{ my: 3 }} />
 
-                <Typography variant="h7" gutterBottom><b>Body: </b></Typography>
-                <Typography variant="body1" paragraph whiteSpace="pre-line">
+                <Typography
+                    variant="subtitle1"
+                    gutterBottom
+                    sx={{ direction: isUrdu ? 'rtl' : 'ltr', fontFamily: isUrdu ? 'Noto Nastaliq Urdu' : 'inherit' }}
+                >
+                    <strong>{t('body')}:</strong>
+                </Typography>
+
+                <Typography
+                    variant="body1"
+                    paragraph
+                    sx={{
+                        whiteSpace: 'pre-line',
+                        direction: isUrdu ? 'rtl' : 'ltr',
+                        fontFamily: isUrdu ? 'Noto Nastaliq Urdu' : 'inherit'
+                    }}
+                >
                     {article.body}
                 </Typography>
             </Paper>

@@ -10,8 +10,9 @@ namespace ArticleManagementSystem.Server.DTOs
             public string Username { get; set; }
             public string Password { get; set; }
             public string Role { get; set; } // "Author" or "Editor"
-        }
+            public string LanguagePreference { get; set; } = "en";
 
+        }
         public class LoginDto
         {
             public string Username { get; set; }
@@ -23,6 +24,7 @@ namespace ArticleManagementSystem.Server.DTOs
             public string Token { get; set; }
             public string Username { get; set; }
             public string Role { get; set; }
+            public string LanguagePreference { get; set; } = "en";
         }
 
         public class ArticleDto

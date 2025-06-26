@@ -8,7 +8,7 @@ import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from '../../api/axios';
 import { useSnackbar } from '../../Context/SnackbarContext ';
-
+import { useTranslation } from 'react-i18next';
 const ViewVersions = () => {
     const { articleId } = useParams();
     const [versions, setVersions] = useState([]);
@@ -17,7 +17,8 @@ const ViewVersions = () => {
     const [titleSearch, setTitleSearch] = useState('');
     const { showSnackbar } = useSnackbar();
     const navigate = useNavigate();
-
+    const { t, i18n } = useTranslation();
+    const isUrdu = i18n.language === 'ur';
     // Get current role from localStorage
     const role = localStorage.getItem('role');
     useEffect(() => {
@@ -73,59 +74,59 @@ const ViewVersions = () => {
     return (
         <Container>
             <Box display="flex" justifyContent="space-between" alignItems="center" mt={4} mb={2}>
-                <Typography variant="h4">Article Versions</Typography>
+                <Typography variant="h4">{t('articleVersions')}</Typography>
                 <Button
                     variant="outlined"
                     startIcon={<ArrowBackIcon />}
                     onClick={() => {
-                       
                         if (role === 'Editor') {
                             navigate('/editor/articles');
                         } else if (role === 'Author') {
                             navigate('/author/articles');
-                        } 
+                        }
                     }}
                 >
-                    Back
+                    {t('back')}
                 </Button>
             </Box>
 
             {/* Filters */}
             <Box display="flex" gap={2} mb={3} flexWrap="wrap">
                 <FormControl sx={{ minWidth: 180 }}>
-                    <InputLabel>Status</InputLabel>
+                    <InputLabel>{t('status')}</InputLabel>
                     <Select
                         value={statusFilter}
-                        label="Status"
+                        label={t('status')}
                         onChange={(e) => setStatusFilter(e.target.value)}
                     >
-                        <MenuItem value="All">All</MenuItem>
-                        <MenuItem value="Draft">Draft</MenuItem>
-                        <MenuItem value="Submitted">Submitted</MenuItem>
-                        <MenuItem value="Approved">Approved</MenuItem>
-                        <MenuItem value="Rejected">Rejected</MenuItem>
+                        <MenuItem value="All">{t('all')}</MenuItem>
+                        <MenuItem value="Draft">{t('draft')}</MenuItem>
+                        <MenuItem value="Submitted">{t('submitted')}</MenuItem>
+                        <MenuItem value="Approved">{t('approved')}</MenuItem>
+                        <MenuItem value="Rejected">{t('rejected')}</MenuItem>
                     </Select>
                 </FormControl>
 
                 <FormControl sx={{ minWidth: 180 }}>
-                    <InputLabel>Language</InputLabel>
+                    <InputLabel>{t('language')}</InputLabel>
                     <Select
                         value={languageFilter}
-                        label="Language"
+                        label={t('language')}
                         onChange={(e) => setLanguageFilter(e.target.value)}
                     >
-                        <MenuItem value="All">All</MenuItem>
-                        <MenuItem value="en">English</MenuItem>
-                        <MenuItem value="ur">Urdu</MenuItem>
-                        <MenuItem value="fr">French</MenuItem>
+                        <MenuItem value="All">{t('all')}</MenuItem>
+                        <MenuItem value="en">{t('english')}</MenuItem>
+                        <MenuItem value="ur">{t('urdu')}</MenuItem>
+                        <MenuItem value="fr">{t('french')}</MenuItem>
                     </Select>
                 </FormControl>
 
                 <TextField
-                    label="Search by Title"
+                    label={t('searchByTitle')}
                     value={titleSearch}
                     onChange={(e) => setTitleSearch(e.target.value)}
                     sx={{ minWidth: 240 }}
+                    inputProps={{ dir: isUrdu ? 'rtl' : 'ltr' }}
                 />
             </Box>
 
@@ -133,12 +134,12 @@ const ViewVersions = () => {
                 <Table>
                     <TableHead>
                         <TableRow>
-                            <TableCell>Version</TableCell>
-                            <TableCell>Title</TableCell>
-                            <TableCell>Language</TableCell>
-                            <TableCell>Status</TableCell>
-                            <TableCell>Created At</TableCell>
-                            <TableCell>Actions</TableCell>
+                            <TableCell>{t('version')}</TableCell>
+                            <TableCell>{t('title')}</TableCell>
+                            <TableCell>{t('language')}</TableCell>
+                            <TableCell>{t('status')}</TableCell>
+                            <TableCell>{t('createdAt')}</TableCell>
+                            <TableCell>{t('actions')}</TableCell>
                         </TableRow>
                     </TableHead>
                     <TableBody>
@@ -147,10 +148,8 @@ const ViewVersions = () => {
                                 <TableCell>{version.versionNumber}</TableCell>
                                 <TableCell>{version.title}</TableCell>
                                 <TableCell>{version.language}</TableCell>
-                                <TableCell>{version.status}</TableCell>
-                                <TableCell>
-                                    {new Date(version.createdAt).toLocaleString()}
-                                </TableCell>
+                                <TableCell>{t(version.status.toLowerCase())}</TableCell>
+                                <TableCell>{new Date(version.createdAt).toLocaleString()}</TableCell>
                                 <TableCell>
                                     <Button
                                         variant="outlined"
@@ -159,7 +158,7 @@ const ViewVersions = () => {
                                             navigate(`/articles/${articleId}/version/${version.language}/${version.versionNumber}`)
                                         }
                                     >
-                                        View
+                                        {t('view')}
                                     </Button>
 
                                     {role !== 'Editor' && (
@@ -171,7 +170,7 @@ const ViewVersions = () => {
                                                     navigate(`/author/articles/${articleId}/edit`)
                                                 }
                                             >
-                                                Edit
+                                                {t('edit')}
                                             </Button>
 
                                             <Button
@@ -181,7 +180,7 @@ const ViewVersions = () => {
                                                 disabled={version.status !== "Draft"}
                                                 onClick={() => handleDelete(version)}
                                             >
-                                                Delete
+                                                {t('delete')}
                                             </Button>
 
                                             <Button
@@ -190,7 +189,7 @@ const ViewVersions = () => {
                                                 disabled={version.status !== "Draft"}
                                                 onClick={() => handleSubmitToEditor(version.versionNumber)}
                                             >
-                                                Submit
+                                                {t('submit')}
                                             </Button>
                                         </>
                                     )}

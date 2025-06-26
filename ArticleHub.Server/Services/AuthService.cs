@@ -19,7 +19,6 @@ namespace ArticleManagementSystem.Server.Services
             _jwtService = jwtService;
             _hasher = hasher;
         }
-
         public async Task<string?> RegisterAsync(RegisterDto dto)
         {
             if (await _context.Users.AnyAsync(u => u.Username == dto.Username))
@@ -28,7 +27,9 @@ namespace ArticleManagementSystem.Server.Services
             var user = new User
             {
                 Username = dto.Username,
-                Role = dto.Role
+                Role = dto.Role,
+                LanguagePreference = dto.LanguagePreference
+
             };
             user.PasswordHash = _hasher.HashPassword(user, dto.Password);
 
@@ -53,7 +54,8 @@ namespace ArticleManagementSystem.Server.Services
             {
                 Token = token,
                 Username = user.Username,
-                Role = user.Role
+                Role = user.Role,
+                LanguagePreference = user.LanguagePreference
             };
         }
 

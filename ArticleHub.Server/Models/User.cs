@@ -7,5 +7,6 @@
         public string PasswordHash { get; set; }
         public string Role { get; set; } // "Author" or "Editor"
         public ICollection<Article> Articles { get; set; }
+        public string LanguagePreference { get; set; } = "en";
     }
 }
