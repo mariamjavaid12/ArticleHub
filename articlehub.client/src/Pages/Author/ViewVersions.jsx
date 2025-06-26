@@ -7,7 +7,7 @@ import {
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from '../../api/axios';
-import { useSnackbar } from '../SnackbarContext ';
+import { useSnackbar } from '../../Context/SnackbarContext ';
 
 const ViewVersions = () => {
     const { articleId } = useParams();

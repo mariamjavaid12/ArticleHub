@@ -4,7 +4,7 @@ import {
 } from '@mui/material';
 import { useParams, useNavigate } from 'react-router-dom';
 import axios from '../../api/axios';
-import { useSnackbar } from '../SnackbarContext ';
+import { useSnackbar } from '../../Context/SnackbarContext ';
 
 const EditArticle = () => {
     const { id } = useParams(); // Article ID

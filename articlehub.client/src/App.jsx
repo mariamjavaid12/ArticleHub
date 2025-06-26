@@ -6,7 +6,7 @@ import PrivateRoute from './auth/PrivateRoute';
 import AuthorDashboard from './Pages/Author/AuthorDashboard';
 import EditorDashboard from './Pages/Editor/EditorDashboard';
 import DashboardLayout from './layout/DashboardLayout';
-import { SnackbarProvider } from './Pages/SnackbarContext ';
+import { SnackbarProvider } from './Context/SnackbarContext ';
 
 import CreateArticle from './Pages/Author/CreateArticle';
 import MyArticles from './Pages/Author/MyArticles';

@@ -4,7 +4,7 @@ import {
     TableBody, Button, Box
 } from '@mui/material';
 import axios from '../../api/axios';
-import { useSnackbar } from '../SnackbarContext ';
+import { useSnackbar } from '../../Context/SnackbarContext ';
 import { useNavigate } from 'react-router-dom';
 
 const PendingReview = () => {
